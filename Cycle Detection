@@ -5,7 +5,9 @@
 */
 
 
-
+/*
+Both programs count no of acyclic comonents of graph
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define pb push_back

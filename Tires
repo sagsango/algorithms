@@ -1,3 +1,51 @@
+//Search Engine [ hackerearth ]
+
+#include<bits/stdc++.h>
+using namespace std;
+struct tree{
+	tree*c[150];
+	int w=0;
+};
+void insert(tree*root,string s,int w)
+{
+	tree*crt=root;
+	for(int i=0;i<(int)s.length();i++)
+	{
+		if(!crt->c[s[i]-'a'])crt->c[s[i]-'a']=new tree;
+		crt->w=max(crt->w,w);
+		crt=crt->c[s[i]-'a'];
+	}
+}
+int query(tree*root,string s)
+{
+	tree*crt=root;
+	for(int i=0;i<(int)s.length();i++)
+	{
+		if(!crt->c[s[i]-'a'])return -1;
+		else crt=crt->c[s[i]-'a'];
+	}
+	return crt->w;
+}
+int main()
+{
+	int n,q;cin>>n>>q;
+	tree*root=new tree;
+	while(n--)
+	{
+		string s;int w;cin>>s>>w;
+		insert(root,s,w);
+	}
+	while(q--)
+	{
+		string s;cin>>s;
+		cout<<query(root,s)<<endl;
+	}
+}
+
+
+
+
+
 // Maximum xor value pair
 
 #include<bits/stdc++.h>
@@ -74,12 +122,6 @@ int32_t main()
 	for(int i=0;i<n;i++)ans=max(ans,max_xor(root,a[i]));
 	cout<<ans<<endl;
 } 
-
-
-
-
-
-
 
 
 

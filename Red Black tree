@@ -12,6 +12,16 @@ A red-black tree is a kind of BST that after each query, BST will be balanced in
 C++ already has a red-black tree inside, set .
 You can read about them in C++ references.
 
+        Average     Worst case
+
+Space   O(n)        O(n) 
+
+Search  O(log n)    O(log n)
+
+Insert  O(log n)    O(log n)
+
+Delete  O(log n)    O(log n)
+
 */
 
 int main(){

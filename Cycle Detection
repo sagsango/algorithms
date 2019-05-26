@@ -39,14 +39,14 @@ typedef priority_queue <fi, vector<fi>, greater<fi> > rpqfi;
 
 const int N=100010;
 vvi G(N);vb B(N);
-bool cycle;
-bool dfs(int I,int p)
+int cycle;
+void dfs(int I,int p)
 {
 	B[I]=1;
 	for(int i=0;i<(int)G[I].size();i++)
 	{
 		if(!B[G[I][i]])dfs(G[I][i],I);
-		else if(G[I][i]!=p)cycle=1;
+		else if(G[I][i]!=p)cycle++;
 	}
 	
 }
@@ -67,12 +67,14 @@ int32_t main()
 		{
 			cycle=0;
 			dfs(i,-1);
+			cycle/=2;//cycles counted twise
 			if(cycle==0)ans++;
 		}
 	}
 	cout<<ans<<endl;
 }
 			
+		
 	
 
 
@@ -141,7 +143,7 @@ int32_t main()
 		{
 			edges=0;nodes=0;
 			dfs(i);
-			edges/=2;
+			edges/=2;//edges counted twise
 			ans+=(edges < nodes);
 		}
 	}

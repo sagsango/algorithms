@@ -15,6 +15,8 @@
 
 /*----------------------------------------Miscillinious------------------------------------------------------------------------------
 
+
+
   *s.rbegin()=*(--s.end())
    sort(v.begin(),v.end()) = negative of v[i] , sort(v.begin(),v.end())
 
@@ -59,6 +61,10 @@ bool compare(marks a,marks b)
 }
 sort(a.begin(),a.end(),compare);
 
+sort(R.begin(),R.end(),[](const marks&a,const marks&b){
+		return a.m1c > b.m1;});
+	
+	
  merge(arr1.begin(), arr1.end(), arr2.begin(), arr2.end(), arr3.begin(),compare);   [    O(n) ]
   
    
@@ -289,7 +295,15 @@ sort(a.begin(),a.end(),compare);
     * (it) l.end()
     * (bool) l.empty()
     * ---------------------------------------------------------------------------------------------------------------------------------*/
-
+  
+  
+/*-------------------------------------------------------------Red Black tree------------------------------------------------------------
+ordered_set<int>  s;
+	s.insert(1); 
+	s.insert(3);
+	cout << s.order_of_key(2) << endl; // tnumber of items in a set that are strictly smaller than k=2           log(no of elements)
+	cout << *s.find_by_order(0) << endl; // returns an iterator to the k=0 largest element (counting from zero), log(no of elements)
+-----------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 

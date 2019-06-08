@@ -40,7 +40,8 @@ int32_t main()
 	IOS
 	//taking no of verticies ans no of edges as input
 	int n,m;cin>>n>>m;
-	//initialise a const of evey vetex as inf
+	//initialise a cont of evey vetex as inf
+	//###########cost[u] : minimum cost to reach u from some other neghibour vertex############
 	vi cost(n+1,inf);
 	//insert all the verticies with their respective cost
 	set<ii>s;

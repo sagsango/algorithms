@@ -72,7 +72,10 @@ sort(R.begin(),R.end(),[](const marks&a,const marks&b){
 
 
 
-
+/*----------------------------------------------------------------------------------------------------------------------------
+ * bitset<N>b  : N = no of bits needed
+ * very diffrent behavior :https://www.geeksforgeeks.org/c-bitset-and-its-application/
+ ----------------------------------------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------Vector STL/Function----------------------------------------------------------
  * auto it=equal_range(A.begin(),A.end(),key) it.first=lower_bound_pointer it.second =upper_bound_pointer

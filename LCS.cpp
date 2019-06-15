@@ -35,7 +35,7 @@ typedef priority_queue <ii, vector<ii>, greater<ii> > rpqii;
 typedef priority_queue <fi, vector<fi>, greater<fi> > rpqfi; 
 
 
-//KNP
+// dp solution  O(n*m)
 int32_t main()
 {
 	IOS

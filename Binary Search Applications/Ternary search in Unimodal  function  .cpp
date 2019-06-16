@@ -1,5 +1,8 @@
 https://en.wikipedia.org/wiki/Ternary_search
 
+
+
+############################################   SEARCH FOR MAXIMUM VALUE   ##############################################
 /*
 
 
@@ -58,3 +61,22 @@ while( l <= r)
     }
 }
       
+
+
+
+
+
+
+
+
+
+######################################   SERCH FOR MINIMUM VALUE ########################################
+void ternary_search(int l,int r)
+{
+	if(l > r)return;
+	int m1=l+(r-l)/3;
+	int m2=r-(r-l)/3;
+	if( f(m1) < f(m2) ){ans=f(m1);r=m2-1;}
+	else {ans=f(m2);l=m1+1;}
+	ternary_search(l,r);
+}

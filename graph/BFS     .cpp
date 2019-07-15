@@ -1,4 +1,10 @@
-  queue<int>q;
+
+
+    vvi G(N);
+    vi level(N,-1);
+    vb vis(N,0);
+ 
+	queue<int>q;
 	q.push(1);
 	level[1]=0;
 	vis[1]=1;

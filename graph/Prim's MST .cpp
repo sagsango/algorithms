@@ -1,3 +1,7 @@
+Use priority_queue for primes too like Diskta Algorithm
+Doubt:Tree formed by Disktra and Primes has same total waight??
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define pb push_back

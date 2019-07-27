@@ -1,5 +1,6 @@
-Topological Short, Dinemic Programming ,Dijkstra : https:
-//www.youtube.com/watch?v=TXkDpqjDMHA&list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P&index=7
+Topological Short, Dinemic Programming ,Dijkstra  : 
+https://www.youtube.com/watch?v=TXkDpqjDMHA&list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P&index=7
+Shortest Path or Longest Path => DP / - w[i]
 
 
 This algorithm is a single source shortest path (from one source to any other vertices). 

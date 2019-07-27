@@ -22,7 +22,7 @@ void dijkstra(int s){
 		{
 			int v = it.first;
 			int w = it.secon;
-			if( vis[v] )cnotinue;
+			if( vis[v] )continue;
 			if( d[v] > w + d[u] )
 			{
 				d[v] = d[u] + w;

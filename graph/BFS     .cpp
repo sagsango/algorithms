@@ -3,6 +3,8 @@ Shortest Path
 BFS
 DP
 Topological Short
+Make Grath from Given Grid or Given conditions 
+Adjencancy List or Adjencency Matrix => Dense or Sparse
 
 
    /*

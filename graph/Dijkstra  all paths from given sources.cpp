@@ -15,14 +15,14 @@ void dijkstra(int s){
 	while(!pq.empty()){
 		int u = pq.top().second;
 		pq.pop();
-		if(vis[u])
+		if(vis[u])//has  relaxed its neighbours
 			continue;
 		vis[u] = true;
 		for(auto it : G[u]) //adj[v][i] = pair(vertex, weight)
 		{
 			int v = it.first;
 			int w = it.secon;
-			if( vis[v] )continue;
+			if( vis[v] )continue;//No need to check because it has already min distance
 			if( d[v] > w + d[u] )
 			{
 				d[v] = d[u] + w;

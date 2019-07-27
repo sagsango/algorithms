@@ -1,3 +1,7 @@
+Topological Short, Dinemic Programming ,Dijkstra : https:
+//www.youtube.com/watch?v=TXkDpqjDMHA&list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P&index=7
+
+
 This algorithm is a single source shortest path (from one source to any other vertices). 
 Pay attention that you can't have edges with negative weight.
 	

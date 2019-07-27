@@ -3,25 +3,33 @@ Pay attention that you can't have edges with negative weight.
 	
 	
 Using std :: priority_queue (better):
-bool mark[MAXN];
-void dijkstra(int v){
+bool vis[MAXN];
+int d[MAXN];
+vector<vector<int,int>>G;
+void dijkstra(int s){
 	fill(d,d + n, inf);
 	fill(mark, mark + n, false);
-	d[v] = 0;
-	int u;
+	d[s] = 0;
 	priority_queue<pair<int,int>,vector<pair<int,int> >, less<pair<int,int> > > pq;
-	pq.push({d[v], v});
+	pq.push({d[s], s});
 	while(!pq.empty()){
-		u = pq.top().second;
+		int u = pq.top().second;
 		pq.pop();
-		if(mark[u])
+		if(vis[u])
 			continue;
-		mark[u] = true;
-		for(auto p : adj[u]) //adj[v][i] = pair(vertex, weight)
-			if(d[p.first] > d[u] + p.second){
-				d[p.first] = d[u] + p.second;
-				pq.push({d[p.first], p.first});
+		vis[u] = true;
+		for(auto it : G[u]) //adj[v][i] = pair(vertex, weight)
+		{
+			int v = it.first;
+			int w = it.secon;
+			if( vis[v] )cnotinue;
+			if( d[v] > w + d[u] )
+			{
+				d[v] = d[u] + w;
+				pq.push({d[v],v});
 			}
+		}
+
 	}
 }	
 

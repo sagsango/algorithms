@@ -2,7 +2,7 @@ This algorithm is a single source shortest path (from one source to any other ve
 Pay attention that you can't have edges with negative weight.
 	
 	
-Using std :: priority_queue (better):
+Using std :: priority_queue (better):  O(n*log(n))
 bool vis[MAXN];
 int d[MAXN];
 vector<vector<int,int>>G;

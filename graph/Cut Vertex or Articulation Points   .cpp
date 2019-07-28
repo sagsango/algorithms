@@ -121,3 +121,42 @@ int main()
     return 0;
 }
  
+
+
+
+4. My implimentation
+
+const int N=1e5+10;
+vector<vector<int>>G;
+vector<int>par(N,-1);//vector to store the parent of vertex v
+vector<int>dfs_h(N,1e15);//height from the root to vertex v
+vector<int>dfs_l(N,1e15);//lowest level height which can be reachable from vertex v
+vector<bool>vis(N+1);//bool vector for track of visited vertex
+vector<bool>cut(N+1);//bool vector for track of cut vertexs
+
+void dfs(int u,int h)
+{
+        vis[u]=1;
+        dfs_h[u]=h;
+        dfs_l[u]=h;
+        int childCount=0;
+        bool cutpoint=false;
+        for(auto v:G[u])
+        {
+                if(!vis[v])
+                {
+                        childCount++;
+                        par[v]=u;
+                        dfs(v,h[u]+1);
+                        if(dfs_h[u] <= dfs_l[v])
+                        {
+                                cutpoint=true;
+                        }
+                        dfs_l[u]=min(dfs_l[u],dfs_l[v]);
+                }
+                else if(v!=par[u])dfs_l[u]=min(dfs_l[u],dfs_h[v]);
+        }
+        if( par[u]==-1 && childCount >= 2 || par[u]!=-1 && cutpoint==true)
+                cut[u]=true;
+}
+                        

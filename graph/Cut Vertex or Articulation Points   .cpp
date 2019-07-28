@@ -148,7 +148,7 @@ void dfs(int u,int h)
                         childCount++;
                         par[v]=u;
                         dfs(v,h[u]+1);
-                        if(dfs_h[u] <= dfs_l[v])
+                        if(dfs_h[u] < dfs_l[v])
                         {
                                 cutpoint=true;
                         }

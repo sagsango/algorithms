@@ -148,7 +148,7 @@ void dfs(int u,int h)
                         childCount++;
                         par[v]=u;
                         dfs(v,h[u]+1);
-                        if(dfs_h[u] < dfs_l[v])
+                        if(dfs_h[u] <= dfs_l[v])   /* Be very care full here see cp.alorithm and above discribed vidio */
                         {
                                 cutpoint=true;
                         }
@@ -159,4 +159,10 @@ void dfs(int u,int h)
         if( par[u]==-1 && childCount >= 2 || par[u]!=-1 && cutpoint==true)
                 cut[u]=true;
 }
+
+
+/*
+   Similar approch for cut edges 
+   see codeforces blog and cp.algorithm
+*/
                         

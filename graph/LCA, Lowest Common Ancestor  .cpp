@@ -2,6 +2,7 @@ https://codeforces.com/blog/entry/16221
 https://cp-algorithms.com/graph/lca_binary_lifting.html
 
 1.Brute Force:
+Preprocessing:
 void dfs(int v,int p = -1){
 	if(par + 1)
 		h[v] = h[p] + 1;
@@ -10,7 +11,6 @@ void dfs(int v,int p = -1){
 		dfs(u,v);
 }
 Query :
-
 int LCA(int v,int u){
 	if(v == u)
 		return v;

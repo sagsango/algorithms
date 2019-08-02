@@ -7,7 +7,7 @@
   
         string s1="abcdefghijklmnopadffawe";
 	string s2="abcdefghijklmnopadffawe";
-	int r=s1.length()+1;
+	int r=min(s1.length(),s2.length())+1;
 	int l=0;
 	while( l + 1 < r )
 	{

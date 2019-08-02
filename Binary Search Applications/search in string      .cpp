@@ -2,9 +2,10 @@
   //serach for first index which is not eqal in given two strings
   //here we are using string comperision 
   //we can accelare it useing heasing of the prifixes
+  //using first diff index we can compare the strings 
   
   
-  string s1="abcdefghijklmnopadffawe";
+        string s1="abcdefghijklmnopadffawe";
 	string s2="abcdefghijklmnopadffawe";
 	int r=s1.length()+1;
 	int l=0;

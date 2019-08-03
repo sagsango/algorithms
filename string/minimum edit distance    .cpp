@@ -26,11 +26,11 @@ int edit_distance(string s1,string s2)
 		{
 			if(s1[i]==s2[j])
 			{
-				dp[i][j]=dp[i-1][j-1];              // no cost for already matching
+				dp[i][j]=dp[i-1][j-1];        // no cost for already matching
 			}
 			else dp[i][j]=min({dp[i-1][j]+1       // delete  s1[i] wrt s2
-                         ,dp[i][j-1]+1,     // insert  s1[i] wrt s2
-                         dp[i-1][j-1]+1});  // replace s1[i] wrt s2
+                         ,dp[i][j-1]+1,                       // insert  s1[i] wrt s2
+                         dp[i-1][j-1]+1});                    // replace s1[i] wrt s2
 		}
 	}
 	return dp[n1][n2];

@@ -1,8 +1,8 @@
 //find maximum occouring substring in the given set of substrings
 //https://www.techiedelight.com/find-maximum-occurring-word-given-set-strings/
+//we have to insert all the prifixes in our tri , here we have manually inserted some hypothetical prefixes
 #include<bits/stdc++.h>
 using namespace std;
-
 
 set<string>st;
 const int maxchild=26;

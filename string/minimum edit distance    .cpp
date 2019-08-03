@@ -18,8 +18,8 @@ int edit_distance(string s1,string s2)
 	vector<vector<int>>dp(n1+1,vector<int>(n2+1));
 	s1='$'+s1;
 	s2='$'+s2;
-	for(int i=0;i<=n1;i++)dp[i][0]=i;
-	for(int i=0;i<=n2;i++)dp[0][i]=i;
+	for(int i=0;i<=n1;i++)dp[i][0]=i; // base case when s2 is NULL
+	for(int i=0;i<=n2;i++)dp[0][i]=i; // base case when s1 is NULL
 	for(int i=1;i<=n1;i++)
 	{
 		for(int j=1;j<=n2;j++)

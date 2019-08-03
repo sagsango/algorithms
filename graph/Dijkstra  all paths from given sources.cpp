@@ -5,7 +5,8 @@ Shortest Path or Longest Path => DP / - w[i]
 
 This algorithm is a single source shortest path (from one source to any other vertices). 
 Pay attention that you can't have edges with negative weight.
-	
+
+//also always maintain parent array
 	
 Using std :: priority_queue (better):  O(n*log(n))
 bool vis[MAXN];

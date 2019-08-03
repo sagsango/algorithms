@@ -58,7 +58,7 @@ void fun(string s1,int i1,string s2,int i2)
 }
 
 
-//recursive dp
+//iterative dp
 int pattren_as_subsequence(string s1,string s2)
 {
 	int n1=s1.length();

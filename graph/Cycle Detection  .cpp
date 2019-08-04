@@ -48,7 +48,7 @@ void dfs(int I,int p)
 	for(int i=0;i<(int)G[I].size();i++)
 	{
 		if(!B[G[I][i]])dfs(G[I][i],I);
-		else if(G[I][i]!=p)cycle++;
+		else if(G[I][i]!=p)cycle++;//Here we consider no multiple edges
 	}
 	
 }

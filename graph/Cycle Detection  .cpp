@@ -48,7 +48,7 @@ void dfs(int I,int p)
 	for(int i=0;i<(int)G[I].size();i++)
 	{
 		if(!B[G[I][i]])dfs(G[I][i],I);
-		else if(G[I][i]!=p)cycle++;//Here we consider no multiple edges
+		else if(G[I][i]!=p)cycle++;//Here we consider no multiple edges : Limitation of the application of the algorithm
 	}
 	
 }
@@ -146,7 +146,7 @@ int32_t main()
 			edges=0;nodes=0;
 			dfs(i);
 			edges/=2;//edges counted twise
-			ans+=(edges < nodes);
+			ans+=(edges < nodes);//always work , in case of multiple edges also
 		}
 	}
 	cout<<ans<<endl;

@@ -1,5 +1,5 @@
-=> n&(n-1) : gives last setbit
-=> n&(-n ) : removes last setbit
+=> n&(n-1) : removes last setbit
+=> n&(-n ) : gives last setbit
 
 =>Maximum Xor pair:
 1. tries

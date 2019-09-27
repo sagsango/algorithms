@@ -4,6 +4,7 @@
    We keep the value of dist[i][j] as it is.
 2) k is an intermediate vertex in shortest path from i to j.
    We update the value of dist[i][j] as dist[i][k] + dist[k][j] if dist[i][j] > dist[i][k] + dist[k][j]
+4) After all relaxation if any diagonal is negative then graph must have negative cycle.
 
 */
 

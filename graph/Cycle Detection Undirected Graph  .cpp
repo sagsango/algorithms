@@ -1,3 +1,7 @@
+/*************************
+******    USE DSU  *******
+*************************/
+
 /*
 1. When the graph contains more than n - 1 edges. This graph contains at least one cycle. 
    This propery can be used to detect cycle

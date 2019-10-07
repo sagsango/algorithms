@@ -1,4 +1,5 @@
 Finding the lexicographically minimal cyclic shift of a string of length n in O(n·log(n)) time
+
 In this problem we need to use compare by great / less in O(log(n)) time using binary search by length of equal subsequence. 
 Duplicate string S and calculate polynomial hashes on prefixes. Each cyclic shift will be represented as a number 
 (initial position). Add all the positions to the vector, and then apply a linear algorithm for finding the minimum 

@@ -1,0 +1,9 @@
+O(n*m + n*log(n)*log(m))
+n:no of strings
+m:max length
+
+n*m : making hash vector
+n*log(n)*log(m) : n*log(n) it is for merge sort
+                  but comarision takes O(1) times when we are dealing with number
+                  but here we will use binary serach for compirision of strings : log(m)
+                  so total n*log(n)*log(m)

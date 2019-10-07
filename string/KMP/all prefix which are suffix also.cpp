@@ -1,4 +1,4 @@
-it is modification of prefix function
+it is modification of prefix function [ which we have done during making pi vector ]
 
 let's pi[s.length()-1]=l1 =>l1 is also suffix which is prifix
       pi[l1-1]=l2         =>l2 is also suffix which is prifix

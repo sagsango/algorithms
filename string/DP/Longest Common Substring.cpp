@@ -17,7 +17,7 @@ int32_t main()
 	
 	vvi dp(n1+1,vi(n2+1));
         int max_length=0;
-        int sub_index_end=-1;
+        int sub_index_end=0;
 	for(int i=1;i<=n1;i++)
 	{
 		for(int j=1;j<=n2;j++)

@@ -11,6 +11,10 @@ const int p1=31 ,p2=43;
 const long long m1=1e9+9,m2=1e9+7;
 vector<long long>p_pow1(N+1),p_pow2(N+1);
 
+/**
+* t : given text
+* s : given pattern
+**/
 vector<int> rabin_karp(string const& s, string const& t) {
   
     int S = s.size(), T = t.size();
@@ -24,7 +28,7 @@ vector<int> rabin_karp(string const& s, string const& t) {
         h_s2 = (h_s2 + (s[i] - 'a' + 1) * p_pow2[i]) % m2; }
 
     vector<int> occurences;
-    for (int i = 0; i + S - 1 < T; i++) { 
+    for (int i = 0; i + S - 1 < T; i++) {  // i <= T-S
         long long cur_h1 = (h1[i+S] + m1 - h1[i]) % m1; 
         long long cur_h2 = (h2[i+S] + m2 - h2[i]) % m2; 
         if( (cur_h1 == h_s1 * p_pow1[i] % m1)&&(cur_h2 == h_s2 * p_pow2[i] % m2) )
@@ -37,7 +41,7 @@ int32_t main()
 	int q;cin>>q;
 	p_pow1[0] = 1; 
 	p_pow2[0] = 1; 
-    for (int i = 1; i <=N ; i++){ 
+        for (int i = 1; i <=N ; i++){ 
         p_pow1[i] = (p_pow1[i-1] * p1) % m1;
         p_pow2[i] = (p_pow2[i-1] * p2) % m2;
 	}

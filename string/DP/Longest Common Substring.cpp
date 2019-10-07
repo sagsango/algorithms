@@ -34,7 +34,7 @@ int32_t main()
 		}
 			
 	}
-	cout<<max_length<<" "<<s1.substr(sub_index_end-max_length+1,max_length)<<endl;
+	cout<<max_length<<" "<<(mx_length?s1.substr(sub_index_end-max_length+1,max_length):"")<<endl;
 
 	
 	

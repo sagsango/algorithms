@@ -10,3 +10,7 @@ The segment [0, len) does not contain j: the answer is pref(i) + a[j] * p^i + pr
 Otherwise: pref(i) + a[j] * p^i + pref(j)-pref(i+1) + a[i] * p^j + pref(len)-pref(j + 1)
 
 Estimates: O(n log(n)) time and O(n) memory
+
+
+
+You can check the editorial written by a_kk and smokescreen on this site for getting solution without hashes in O(n) time.

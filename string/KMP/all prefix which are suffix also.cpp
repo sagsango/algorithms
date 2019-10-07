@@ -22,3 +22,6 @@ vector<int> pxifix_which_are_also_suffix(string s)
               }
               return ans;
          }
+         /**
+         * ans[i] : length of prifix which is also a suffix
+         **/

@@ -57,7 +57,7 @@ int32_t main()
 		{
 			if(s1[i]==s2[j])
 			{
-				dp[i][j]=max({dp[i-1][j-1] + 1 ,dp[i-1][j] ,dp[i][j-1] });
+				dp[i][j]=dp[i-1][j-1] + 1;
 			}
 			else
 			{

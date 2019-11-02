@@ -70,7 +70,7 @@ void preprocess(int root) {
     dfs(root, root);
 }
 
-3.Binary Lifting with weight [ 2^i th ancestor and its heght ]
+3.Binary Lifting with weight [ 2^i th ancestor and its height ]
 https://codeforces.com/gym/255313/problem/F
 void dfs(int u,int p,int w)
 {

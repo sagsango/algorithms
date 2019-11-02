@@ -20,7 +20,7 @@ int LCA(int v,int u){
 }
 
 
-2.Binary Lifting [ ancestor at 2^i : sotore it ]:
+2.Binary Lifting [ 2^i th  ancestor ]:
 int n, l;
 vector<vector<int>> adj;
 
@@ -69,3 +69,24 @@ void preprocess(int root) {
     up.assign(n, vector<int>(l + 1));
     dfs(root, root);
 }
+
+3.Binary Lifting with weight [ 2^i th ancestor and its heght ]
+https://codeforces.com/gym/255313/problem/F
+void dfs(int u,int p,int w)
+{
+	int[u]=timer++;
+	
+	l[u][0]=p;
+	h[u][0]=w;
+	for(int i=1;i<=L;i++)
+	{
+		l[u][i]= l[ l[u][i-1] ][i-1];
+		d[u][i]= d[ l[u][i-1] ][i-1] + d[u][i-1];
+	}
+	
+	for(auto[v,w1]:g[u])
+	{
+		if(v!=p)dfs(v,u,w1);
+	}
+}
+

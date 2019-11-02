@@ -20,7 +20,7 @@ int LCA(int v,int u){
 }
 
 
-2.Binary Lifting:
+2.Binary Lifting [ ancestor at 2^i : sotore it ]:
 int n, l;
 vector<vector<int>> adj;
 

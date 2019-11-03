@@ -6,6 +6,10 @@ vector<int> freq_of_each_prefix(string s)
 { 
   vector<int>z=z_function(s);
 	z[0]=n;//in our discussion we had taken z[0]=0
+	/**
+	*z[0]=n 
+	*will leads to add 1 to all originoal prifix
+	**/
 	vector<int>freq(n+2);
 	for(int i=0;i<n;i++)
 	if(z[i])

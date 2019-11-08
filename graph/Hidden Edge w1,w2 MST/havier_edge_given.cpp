@@ -4,6 +4,7 @@ you have to find total no of components using lighter edeges
 Problem   : https://codeforces.com/contest/1242/problem/B
 Solution  : https://codeforces.com/contest/1242/submission/64375742
 
+https://codeforces.com/gym/259024
 
 
 

@@ -1,6 +1,23 @@
+https://codeforces.com/blog/entry/4907
+https://codeforces.com/blog/entry/64903
 
-/*
-// https://codeforces.com/blog/entry/4907
+
+void dfs(int v, int p){
+  color[v] = 1; // GREY
+  for(int w : g[v]){
+    if(color[w] == 1){
+      // you found a cycle, it's easy to recover it now.
+    }
+    if(color[w] == 0) dfs(w, v);
+  }
+  color[v] = 2; // BLACK
+}
+
+for(int i = 0; i < n; i++)
+  if(color[i] == 0) dfs(i, -1);
+
+
+
 
 Use the following approach: consider we have three colors, and each vertex should be painted with one of these colors. 
 "White color" means that the vertex hasn't been visited yet. "Gray" means that we've visited the vertex but haven't visited all
@@ -13,4 +30,4 @@ If u is gray, you've found the cycle because you haven't left u yet (it's gray, 
 after walking throung some path.
 
 To keep vertices' colors replace boolean array with char or integer array and just use values in range [0..2].
-*/
+

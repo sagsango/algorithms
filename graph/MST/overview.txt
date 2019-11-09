@@ -1,0 +1,8 @@
+->Primes similar to dijstra
+->Dijstra works on dircted + undirected [ but should not have negative cycyle]
+->Primes on undirected [selected source may not reach every node] [ Not have negative cycyle]
+  or find all possible source then apply primes on every source
+->Kruskal works fine on undirected
+  [ Little more constrain can give you MST : indegre should not be more than 1, you can maintain during forming it
+    same complexity O( log(e) ) ]
+ 

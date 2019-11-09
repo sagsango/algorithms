@@ -1,3 +1,7 @@
+-> Note : graph my be directed or undirected 
+        : goes very node +  check every edge [ twise in undirected and once in directed] + maintain sorted edges
+        : O( v + e * log(e) )
+
 Topological Short, Dinemic Programming ,Dijkstra  : 
 https://www.youtube.com/watch?v=TXkDpqjDMHA&list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P&index=7
 Shortest Path or Longest Path => DP / - w[i]

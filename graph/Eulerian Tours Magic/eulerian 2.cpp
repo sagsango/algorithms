@@ -7,7 +7,7 @@ void dfs(int v,int p = -1){
 }
 
 
-1.Update + sum of subtree of vertex QUERY
+1.Update all subtree  + path sum query. [ sum of path between u - v : which can be broken down to root-v sum]
 Consider 2 copies for a single node in the Euler tour, one for entry and one for exit. When you want to add a value v 
 to the subtree, maintain a fenwick tree, and do +=v on in[node] and -=v on out[node]. Path sum query can be broken down 
 to sum from root to any node. For the root to node sum query, just return prefix sum of in[node] from BIT.
@@ -19,7 +19,7 @@ updated the subtree of x with value v.
 	
 	
 
-2.Update + sum till the vertex QUERY
+2.Update node + path sum query. [ sum of path between u - v : which can be broken down to root-v sum]
 The one you've shown it can also be used to update values at each node in  time and query the sum from a node all the 
 way to the root in  time. Simply create two segment trees over the Euler Tour, one where the values of each node are stored 
 in the positions of their first appearance, and one where the values of each node are stored in the positions of their 

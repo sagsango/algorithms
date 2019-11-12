@@ -3,7 +3,7 @@ Graphs
 - 0-1 BFS by dumbass [done]
 - 2-SAT by Swift  [only know what is 2-SAT]
 - Algorithm Gym :: Graph Algorithms by DarthPrince [done]
-- On Euler tour trees by ifsmirnov
+- On Euler tour trees by ifsmirnov [done]
 - 'Meet in the middle' with shortest path problems of unweighted graph by liv1n9
 - Vertex cover and 2-SAT by irkstepanov
 - Add edges to a digraph to make it strongly connected by chaotic_iak

@@ -1,5 +1,9 @@
 https://codeforces.com/blog/entry/68138
 
+We talk about Vertex Cactus graph:-[ which is easy solvable by DGS Graph]
+A connected undirected graph is called a vertex cactus if each vertex of this graph belongs to no more than one simple cycle.
+
+Other Types of Catalog Graphs:-
 A cactus is a graph where every edge (or sometimes, vertex) belongs to at most one simple cycle. 
 The first case is called an edge cactus, the second case is a vertex cactus. Cacti have a simpler
 structure than general graphs, as such it is easier to solve problems on them than on general graphs.

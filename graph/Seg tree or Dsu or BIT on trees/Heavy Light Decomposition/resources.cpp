@@ -1,4 +1,5 @@
 https://cp-algorithms.com/graph/hld.html
+https://codeforces.com/blog/entry/12239
 https://codeforces.com/blog/entry/22072
 https://codeforces.com/blog/entry/12239
 https://codeforces.com/blog/entry/12488

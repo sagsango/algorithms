@@ -9,6 +9,12 @@ bool cmp(Query A, Query B)
   return A.r > B.r;
 }
 
+Above can give RE use it : by Arpa          https://codeforces.com/blog/entry/7383
+bool cmp(Query A, Query B){
+  if (A.l / S ！= B.l / S) return A.l < B.l;
+  return A.l / S % 2 ? A.r > B.r : A.r < B.r;
+}
+
 
 /* Dquery SPOJ */
 int answer;

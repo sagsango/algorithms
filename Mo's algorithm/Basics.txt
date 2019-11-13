@@ -1,10 +1,12 @@
 https://blog.anudeep2011.com/mos-algorithm/
 https://codeforces.com/blog/entry/43230
 
+We must be able to write add and remove function then only Mo's is applicable
 Problems
-1.Count total unique elements int L,R queries             : O(q*sqrt(n))
+1.Count total unique elements int L,R queries[DQURY SPOJ] : O(q*sqrt(n))
 2.Count total elemnts having frequency >=3 in L,R Queire  : O(q*sqrt(n))
 3.Find Kth maimum element in L,R Quries                   : O(q*sqrt(n)*log(n)) [We have to use set here ]
+4.Count total distinct clr in subtree [extend 1]
 
 
 General Solution :

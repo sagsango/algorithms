@@ -5,7 +5,7 @@ S = the max integer number which is less than sqrt(N);
 /* or B*B >= N where N=no of elements in our array */
 bool cmp(Query A, Query B)
 {
-  if (A.l / S ！= B.l / S) return A.l / S < B.l / S;
+  if (A.l / S != B.l / S) return A.l / S < B.l / S;
   return A.r > B.r;
 }
 

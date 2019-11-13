@@ -1,5 +1,6 @@
 https://blog.anudeep2011.com/mos-algorithm/
 https://codeforces.com/blog/entry/43230
+https://www.hackerearth.com/practice/notes/mos-algorithm/
 
 We must be able to write add and remove function then only Mo's is applicable
 Problems

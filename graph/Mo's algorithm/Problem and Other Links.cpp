@@ -23,3 +23,4 @@ https://cp-algorithms.com/data_structures/sqrt_decomposition.html
 http://hmrockstar.blogspot.com/2017/07/mos-query-sqrt-decomposition-algorithm.html
 https://www.hackerearth.com/practice/notes/mos-algorithm/
 https://discuss.codechef.com/t/merge-sort-tree-tutorial/14277
+https://github.com/Errichto/youtube/wiki/Video-ideas

@@ -5,4 +5,5 @@ https://www.codechef.com/ALKH2016/problems/VLB
 https://www.spoj.com/problems/ZQUERY/
 https://www.hackerearth.com/challenges/competitive/july-clash-15/algorithm/something-genuine/
 https://www.hackerrank.com/contests/world-codesprint-9/challenges/box-operations
+https://www.spoj.com/problems/FREQUENT/
 see contest of "Mos Algorithm" in Gym

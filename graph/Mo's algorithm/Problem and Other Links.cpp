@@ -1,0 +1,10 @@
+https://codeforces.com/contest/852/problem/I
+https://www.spoj.com/problems/QTREE/
+https://www.spoj.com/problems/DQUERY/
+https://www.quora.com/How-to-solve-Wealth-Disparity-from-INOI-2016
+https://codeforces.com/problemset/problem/375/D
+https://courses.csail.mit.edu/6.851/spring12/scribe/L20.pdf
+https://codeforces.com/blog/entry/22060
+https://www.spoj.com/problems/COT2/
+https://codeforces.com/gym/100962/attachments/download/4255/20152016-petrozavodsk-winter-training-camp-moscow-su-trinity-contest-en.pdf
+https://www.codechef.com/ALKH2016/problems/VLB

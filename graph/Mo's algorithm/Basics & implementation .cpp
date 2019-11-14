@@ -157,4 +157,5 @@ Since the ordering can be done in O(n), and in theory you can answer lca queries
 pre-processing, you have a linear solution (assuming 0 ≤ A[x] < N).  [ Given on same Blog ]
 	
 2.Problem can be solve using set.Idea and code given on the blog.
+3.https://codeforces.com/blog/entry/22060
 	

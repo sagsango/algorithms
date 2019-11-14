@@ -24,7 +24,7 @@ int LCA(int v,int u){
 int n, l;
 vector<vector<int>> adj;
 
-int timer;
+int timer=0;
 vector<int> tin, tout;
 vector<vector<int>> up;
 
@@ -55,20 +55,13 @@ int lca(int u, int v)
     if (is_ancestor(v, u))
         return v;
     for (int i = l; i >= 0; --i) {
-        if (!is_ancestor(up[u][i], v))
+        if (up[u][i] && !is_ancestor(up[u][i], v))
             u = up[u][i];
     }
     return up[u][0];
 }
+dfs(1,0);
 
-void preprocess(int root) {
-    tin.resize(n);
-    tout.resize(n);
-    timer = 0;
-    l = ceil(log2(n));
-    up.assign(n, vector<int>(l + 1));
-    dfs(root, root);
-}
 
 3.Binary Lifting with weight [ 2^i th ancestor and its height ]
 https://codeforces.com/gym/255313/problem/F

@@ -8,3 +8,4 @@ https://codeforces.com/blog/entry/22060
 https://www.spoj.com/problems/COT2/
 https://codeforces.com/gym/100962/attachments/download/4255/20152016-petrozavodsk-winter-training-camp-moscow-su-trinity-contest-en.pdf
 https://www.codechef.com/ALKH2016/problems/VLB
+https://discuss.codechef.com/t/mlchef-editorial/3172

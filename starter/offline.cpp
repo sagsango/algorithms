@@ -20,7 +20,7 @@
  /*---------------------------Bit --------------------------------------------------------------------------------------------------
   * int lowbit(int n){return n&(-n);}
   * toggle least set bit  n=n&(n-1); // becomes zero if power of 2
-  * __builtin_popcount(x); //return number of 1 in binary representation of x
+  * __builtin_popcountl(x); //return number of 1 in binary representation of x
   * builtin_ctz (count trailing zeros)
   * builtin_clz (count leading zeros)
   */
@@ -85,8 +85,8 @@ class compare{
 	public:
     bool operator ()( ii x ,ii y)
     {
-		if( x.first != y.first )return x.first > y.first;
-		else return x.second < y.second;
+		if( x.first != y.first )return x.first > y.first;//non decreasing
+		else return x.second < y.second;//non increasing
     }
 };
 priority_queue< ii , vector<ii> , compare > pq;
@@ -102,7 +102,16 @@ sort(R.begin(),R.end(),[](const marks&a,const marks&b){
  
 int dx[8]={0,1,1,1,0,-1,-1,-1};
 int dy[8]={1,1,0,-1,-1,-1,0,1};
-  
+
+int dx[6]={1,-1,0,0,0,0};
+int dy[6]={0,0,1,-1,0,0};
+int dz[6]={0,0,0,0,1,-1};  
+
+
+typedef pair<ii,int> iii;
+#define e1 first.first
+#define e2 first.second
+#define e3 second
 ------------------------------------------------------------------------------------------------------------------------------------*/
 
 

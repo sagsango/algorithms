@@ -144,3 +144,15 @@ int32_t main()
 	
 	
 }
+
+
+
+Note:
+BTW, there is a standard solution for the first problem (see this link in Russian). For each of the colors order
+all the vertices of this color according to the dfs traversal, let the vertices be labelled v1, v2, ..., vk. Add +1
+to each of these verticies, and add -1 to the LCAs of the neighboring vertices lca(v1, v2), lca(v2, v3), ..., lca(vk - 1, vk).
+If you sum up the values inside a subtree, you get the number of distinct elements in it.
+
+Since the ordering can be done in O(n), and in theory you can answer lca queries for a static tree in O(1) with O(n)
+pre-processing, you have a linear solution (assuming 0 ≤ A[x] < N).  [ Given on same Blog ]
+	

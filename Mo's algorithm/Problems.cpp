@@ -6,4 +6,10 @@ https://www.spoj.com/problems/ZQUERY/
 https://www.hackerearth.com/challenges/competitive/july-clash-15/algorithm/something-genuine/
 https://www.hackerrank.com/contests/world-codesprint-9/challenges/box-operations
 https://www.spoj.com/problems/FREQUENT/
+https://www.codechef.com/problems/IITI15
+https://codeforces.com/contest/351/problem/D
+https://www.codechef.com/MARCH14/problems/GERALD07
+https://www.hackerrank.com/contests/w12/challenges/white-falcon-and-tree
+http://disq.us/url?url=http%3A%2F%2Flightoj.com%2Fvolume_showproblem.php%3Fproblem%3D1188%3Ani7TMQFsxJlaQqSJJWDB3TpdTKI&cuid=2891552
+http://disq.us/url?url=http%3A%2F%2Flightoj.com%2Fvolume_showproblem.php%3Fproblem%3D1339%3A6LPjfxuyYHymfDUikTOjXKxKcv0&cuid=2891552
 see contest of "Mos Algorithm" in Gym

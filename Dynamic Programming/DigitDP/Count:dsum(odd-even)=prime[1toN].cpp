@@ -22,7 +22,8 @@ int count(int pos, int even, int odd, int tight,
 { 
 	// Base Case 
 	if (pos == num.size()) { 
-		if (num.size() & 1) 
+		//if (num.size() & 1) 
+		if( odd > even )
 			swap(odd, even); 
 		int d = even - odd; 
 

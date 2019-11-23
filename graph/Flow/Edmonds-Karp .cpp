@@ -2,7 +2,7 @@ Sources   :      https://cp-algorithms.com/graph/edmonds_karp.html#integral-theo
 Problem   :      http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_6_A
           :      https://practice.geeksforgeeks.org/problems/find-the-maximum-flow/0
           :      O(V*E*E)
-          :      Directed or Undiredted Graph
+          :      Directed or Undiredted Graph    [ I can impliment it ]
           
           
           

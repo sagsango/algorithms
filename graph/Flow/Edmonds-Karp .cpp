@@ -1,6 +1,8 @@
 Sources   :      https://cp-algorithms.com/graph/edmonds_karp.html#integral-theorem
 Problem   :      http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_6_A
+          :      https://practice.geeksforgeeks.org/problems/find-the-maximum-flow/0
           :      O(V*E*E)
+          :      Directed or Undiredted Graph
           
           
           
@@ -65,7 +67,14 @@ int main()
 		int u,v,w;cin>>u>>v>>w;
 		adj[u].push_back(v);
 		adj[v].push_back(u);
+		//If graph is direcred
 		capacity[u][v]=w;
+		
+		//If graph is undirected
+		//capacity[u][v]=w;
+		//capacity[v][u]=w;
+		
+		
 	}
 	cout<< maxflow(0,n-1)<<endl;
 }

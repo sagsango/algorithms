@@ -1,10 +1,11 @@
+source         :     https://cp-algorithms.com/string/string-hashing.html
 /**
 *  Counting all diff substrings.
 *  For every diff length we will put them if diff groups .It will reduce the collision probability
 */
 int count_unique_substrings(string const& s) {
     int n = s.size();
-
+    
     const int p = 31;
     const int m = 1e9 + 9;
     vector<long long> p_pow(n);

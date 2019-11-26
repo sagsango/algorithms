@@ -5,7 +5,6 @@ source         :     https://cp-algorithms.com/string/string-hashing.html
 */
 int count_unique_substrings(string const& s) {
     int n = s.size();
-    
     const int p = 31;
     const int m = 1e9 + 9;
     vector<long long> p_pow(n);

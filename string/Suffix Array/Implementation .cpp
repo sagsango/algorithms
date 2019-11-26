@@ -1,4 +1,5 @@
 source   :    https://cp-algorithms.com/string/suffix-array.html
+Problem  :    https://www.hackerearth.com/practice/data-structures/advanced-data-structures/suffix-arrays/tutorial/
 Input    :    abcdabc
 Output   :    4051623
 

@@ -52,7 +52,7 @@ Category	Problems Count
 46	Heavy-Light Descomposition	36
 47	Non-Classical Dynamic Programming	36
 48	KMP	35
-49	string suffix structures	35
+[49]	string suffix structures	35
 50	expresison and parsing	33
 51	Meet in The Middle	29
 52	0/1 Knapsack	27

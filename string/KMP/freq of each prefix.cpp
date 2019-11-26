@@ -23,7 +23,7 @@ vector<int> freq_of_prefix(string s)
            ans[pi[i]]++;
         for (int i = n-1; i > 0; i--)
            ans[pi[i-1]] += ans[i];
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; i <= n; i++) // Note ans[0]=0
            ans[i]++;
         return ans;
     }

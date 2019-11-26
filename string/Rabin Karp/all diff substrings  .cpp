@@ -1,4 +1,5 @@
 source         :     https://cp-algorithms.com/string/string-hashing.html
+Problem        :     https://www.hackerearth.com/practice/data-structures/advanced-data-structures/suffix-arrays/practice-problems/algorithm/difdif/
 /**
 *  Counting all diff substrings.
 *  For every diff length we will put them if diff groups .It will reduce the collision probability

@@ -17,6 +17,7 @@ vector<int> prefix_function(string s) {
 vector<int> freq_of_prefix(string s)
     { 
         vector<int>pi=prefix_function(s);
+        int n=s.length();
         vector<int> ans(n + 1);
         for (int i = 0; i < n; i++)
            ans[pi[i]]++;

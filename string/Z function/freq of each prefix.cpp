@@ -19,6 +19,7 @@ vector<int> z_function(string s) {
 vector<int> freq_of_each_prefix(string s)
 { 
   vector<int>z=z_function(s);
+	int n=s.length();
 	z[0]=n;//in our discussion we had taken z[0]=0
 	/**
 	*z[0]=n 

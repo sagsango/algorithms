@@ -1,4 +1,10 @@
+/**
+*  I think find no of cmoponents using only 0 edges
+*  Then no of 1 edges will be (no of components - 1)
+**/
+
 https://codeforces.com/blog/entry/22276
+
 
 for all v in vertices:
 	dist[v] = inf

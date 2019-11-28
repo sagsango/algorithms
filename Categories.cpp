@@ -52,7 +52,7 @@ Category	Problems Count
 46	Heavy-Light Descomposition	36
 47	Non-Classical Dynamic Programming	36
 48	KMP	35
-[49]	string suffix structures	35
+49	string suffix structures	35
 50	expresison and parsing	33
 51	Meet in The Middle	29
 52	0/1 Knapsack	27
@@ -60,16 +60,16 @@ Category	Problems Count
 54	Balanced Binary Search Trees	26
 55	The_scorpion	24
 56	MOs Algorithm (Query square root decomposition)	24
-57	FFT	23
-58	Convex hull	22
+#57	FFT	23
+#58	Convex hull	22
 59	LIS	21
 60	TopologicalSort	21
 61	2sat	21
 62	ACM-ICPC Dhaka Site Regional Contests	20
-63	polynomial	20
+#63	polynomial	20
 64	All Pair Shortest Path (Floyd-Warshall)	18
 65	LCS	17
-66	Aho-Corasick	16
+[66]	Aho-Corasick	16
 67	LCA	16
 68	Codeforces Practice List	15
 69	interactive	15

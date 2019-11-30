@@ -1,6 +1,6 @@
 Source                    :    https://en.wikipedia.org/wiki/Eulerian_path#Hierholzer.27s_algorithm
 
-Eulerian Path/Trail/Walk  :    In graph theory, an Eulerian trail (or Eulerian path) is a trail in a finite graph that visits                                  every edge exactly once (allowing for revisiting vertices).
+Eulerian Path/Trail/Walk  :    In graph theory, an Eulerian trail (or Eulerian path) is a trail in a finite graph that visits every edge exactly once (allowing for revisiting vertices).
 Eulerian circuit/cycle    :    Eulerian circuit or Eulerian cycle is an Eulerian trail that starts and ends on the same vertex.
                    
 Conditions :-

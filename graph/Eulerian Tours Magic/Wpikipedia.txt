@@ -1,1 +1,23 @@
-https://en.wikipedia.org/wiki/Eulerian_path#Hierholzer.27s_algorithm
+Source                    :    https://en.wikipedia.org/wiki/Eulerian_path#Hierholzer.27s_algorithm
+
+Eulerian Path/Trail/Walk  :    In graph theory, an Eulerian trail (or Eulerian path) is a trail in a finite graph that visits                                  every edge exactly once (allowing for revisiting vertices).
+Eulerian circuit/cycle    :    Eulerian circuit or Eulerian cycle is an Eulerian trail that starts and ends on the same vertex.
+                   
+Conditions :-
+For Eulerian  Trail       :    All vertices in the graph have an even degree.
+For Eulerian  Circuit     :    Zero or two vertices have an odd degree.
+                          :    A graph that has an Eulerian trail but not an Eulerian circuit is called semi-Eulerian.
+                          
+                          
+                          
+Properties :-
+1.An undirected graph has an Eulerian cycle if and only if every vertex has even degree, and all of its vertices with nonzero degree belong to a single connected component.
+2.An undirected graph can be decomposed into edge-disjoint cycles if and only if all of its vertices have even degree. So, a graph has an Eulerian cycle if and only if it can be decomposed into edge-disjoint cycles and its nonzero-degree vertices belong to a single connected component.
+3.An undirected graph has an Eulerian trail if and only if exactly zero or two vertices have odd degree, and all of its vertices with nonzero degree belong to a single connected component.
+4.A directed graph has an Eulerian cycle if and only if every vertex has equal in degree and out degree, and all of its vertices with nonzero degree belong to a single strongly connected component. Equivalently, a directed graph has an Eulerian cycle if and only if it can be decomposed into edge-disjoint directed cycles and all of its vertices with nonzero degree belong to a single strongly connected component.
+5.A directed graph has an Eulerian trail if and only if at most one vertex has (out-degree) − (in-degree) = 1, at most one vertex has (in-degree) − (out-degree) = 1, every other vertex has equal in-degree and out-degree, and all of its vertices with nonzero degree belong to a single connected component of the underlying undirected graph.
+
+  
+
+
+

@@ -11,13 +11,15 @@ Adjencancy List or Adjencency Matrix => Dense or Sparse
    /*
      Also Can Make a Par[] array for parent 
    */
-    vvi G(N);
-    vi level(N,-1);
-    vb vis(N,0);
+    vector<int>g[N+1];
+    vector<int>l(N+1);
+    vector<int>par(N+1);
+    vector<int>vis(N+1);
  
 	queue<int>q;
 	q.push(1);
-	level[1]=0;
+        par[1]=0;
+	l[1]=0;
 	vis[1]=1;
 	while(q.size())
 	{
@@ -27,9 +29,9 @@ Adjencancy List or Adjencency Matrix => Dense or Sparse
 			if(!vis[v]) 
 			{
 				q.push(v);
-				level[v]=level[u]+1;
+				par[v]=u;
+				l[v]=l[u]+1;
 				vis[v]=1;
 			}
 		}
 	}
-	cout<<level[n]<<endl;

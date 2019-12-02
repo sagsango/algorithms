@@ -1,4 +1,6 @@
 source    : Competitive Programmer’s Handbook Antti Laaksonen Draft July 3, 2018  [ Page - 151 ]
+          : https://www.geeksforgeeks.org/number-shortest-paths-unweighted-directed-graph/
+
 vector<int>dis(N+1,inf);
 vector<int>cnt(N+1,0);
 vector<int>topo;

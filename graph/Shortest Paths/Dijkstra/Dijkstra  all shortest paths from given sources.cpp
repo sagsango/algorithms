@@ -15,11 +15,13 @@ Pay attention that you can't have edges with negative weight.
 Using std :: priority_queue (better):  O(n*log(n))
 bool vis[MAXN];
 int d[MAXN];
+vector<int>par(MAXN);
 vector<vector<int,int>>G;
 void dijkstra(int s){
 	fill(d,d + n, inf);
 	fill(mark, mark + n, false);
 	d[s] = 0;
+	par[s]=-1;
 	priority_queue<pair<int,int>,vector<pair<int,int> >, less<pair<int,int> > > pq;
 	pq.push({d[s], s});
 	while(!pq.empty()){
@@ -35,6 +37,7 @@ void dijkstra(int s){
 			if( vis[v] )continue;//No need to check because it has already min distance
 			if( d[v] > w + d[u] )
 			{
+				par[v]=u;
 				d[v] = d[u] + w;
 				pq.push({d[v],v});
 			}

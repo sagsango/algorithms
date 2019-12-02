@@ -4,7 +4,7 @@ dis[s]=0;
 int min_dis(int s,int t)
 {
     /* It will be more optimal is there is only one query , because it will do not do extra work */
-    /* for multiple query from same source: O(n) + O(q) *O(1) */
+    /* for multiple query from same source: O(n) + O(q) * O(1) */
      if( dis[t]!=-1 )return dis[t];
      dis[t]=1e9;
      for(auto [v,w]:g[t])
@@ -19,8 +19,8 @@ int min_dis(int s,int t)
      vector<int>dis(N+1,inf);
      topo_sort();
      dis[s]=0;
-     for(int i=0;i<topo.size();i++)
-        for(auto [v,w]:g[topo[i]])
-            dis[v]=min(dis[v],dis[ topo[i] ]+w);
+     for(auto u:topo)
+        for(auto [v,w]:g[u])
+            dis[v]=min(dis[v],dis[u]+w);
      return dis[t];
 }

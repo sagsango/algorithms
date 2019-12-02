@@ -11,7 +11,7 @@
         if(!vis[v])dfs(u);
       topo.push_back(u);
   }
-  void find_topo()
+  void topo_sort()
   {
       for(int i=1;i<=n;i++)
         if(!vis[i])dfs(i);

@@ -14,3 +14,14 @@ Sucessor Graph : Every vertex has out degree 1
                       |                       v
                       O<----------O<----------O
                :      O---------->O---------->O---------->O
+               :      O----->O-----O
+                             ^     |
+                             |     v
+                             O-----O
+
+
+
+
+Application    :   1.What is kth ancestor of a node   log(n)
+                   2.What is lca of the two nodes     log(n)
+                

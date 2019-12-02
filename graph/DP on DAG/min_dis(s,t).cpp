@@ -1,10 +1,12 @@
 /*recursive*/
-vector<int>dis(N+1,inf);
+vector<int>dis(N+1,-1);
 dis[s]=0;
 int min_dis(int s,int t)
 {
     /* It will be more optimal is there is only one query , because it will do not do extra work */
-     if( s == t )return 0;
+    /* for multiple query from same source: O(n) + O(q) *O(1) */
+     if( dis[t]!=-1 )return dis[t];
+     dis[t]=1e9;
      for(auto [v,w]:g[t])
          dis[t]=min(dis[t],dis(s,v)+w);
      return dis[t];

@@ -6,7 +6,7 @@ int count_path(int s,int t)
     if(cnt[t]!=-1)return cnt[t];
     cnt[t]=0;
     for(auto v:g[s])
-    cnt[t]+=count(s,v);
+    cnt[t]+=count_path(s,v);
     return cnt[t];
 }
 

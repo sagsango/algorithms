@@ -1,5 +1,5 @@
 source   :   https://www.geeksforgeeks.org/number-shortest-paths-unweighted-directed-graph/
-
+/*UdUwCG : undirected unwaited cyclic graph */
 vector<int>dis(N+1,inf);
 vector<int>cnt(N+1,0);
 vector<int>vis(N+1);

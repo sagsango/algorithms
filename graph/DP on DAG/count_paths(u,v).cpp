@@ -1,3 +1,4 @@
+Referance  : Competitive Programmer’s Handbook Antti Laaksonen Draft July 3, 2018  [ Page - 151 ]
 /*iterative*/
 vector<int>cnt(N+1,-1);
 cnt[s]=1;

@@ -1,4 +1,5 @@
 source  :  https://cp-algorithms.com/graph/euler_path.html
+        :  https://codeforces.com/blog/entry/49035
 
 #include<bits/stdc++.h>
 using namespace std;

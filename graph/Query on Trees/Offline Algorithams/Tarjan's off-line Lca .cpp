@@ -1,4 +1,6 @@
 source  :   https://cp-algorithms.com/graph/lca_tarjan.html
+        :   Competitive Programmer’s Handbook ,Antti Laaksonen ,Draft July 3, 2018 [ page : 170 ]
+
 
 vector<vector<int>> adj;
 vector<vector<int>> queries;

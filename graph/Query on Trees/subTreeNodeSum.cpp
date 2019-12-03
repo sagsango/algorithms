@@ -36,6 +36,7 @@ int dfs(int u,int p)
  void updateNodeValue(int u,int addent)
  {
     B.update(in[u],addent);
+    val[u]+=addent;
  }
  
  

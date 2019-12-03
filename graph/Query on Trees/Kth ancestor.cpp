@@ -1,5 +1,6 @@
-/* what will be kth ancestor of the node v : log(n) */
+source    :   Competitive Programmer’s Handbook ,Antti Laaksonen ,Draft July 3, 2018 [ page : 164 ]
 
+/* what will be kth ancestor of the node v : log(n) */
 const int L=30;
 const int N=1e6;
 vector<int>g[N+1];

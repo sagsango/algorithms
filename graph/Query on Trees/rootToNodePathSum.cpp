@@ -1,13 +1,11 @@
 source    :   Competitive Programmer’s Handbook ,Antti Laaksonen ,Draft July 3, 2018 [ page : 164 ]
-/* update node value   */
-/* find path sum root to node v */
+requirment:   update node value  
+          :   find path sum root to node v
 /* Alternative : using in[v] and out[v]  values , see eulerian magic */
-
 
 /* Idea  : dp[v] contains sum from root to v
          : if val[v] is updated, it will effect all the nodes val in its subtree
 */
-
 const int N=1e6+1;
 vector<int> g[N+1];
 vector<int> val(N+1);

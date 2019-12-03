@@ -25,7 +25,7 @@ void dfs(int u,int p,int ht)
 void init(int root=1)
 {
     dfs(1,0,0);
-    make_segment_tree( query_array );
+    make_segment_tree( query_array );  //segtree< pair<int,int> > seg : range min query only.
 }
 
 int find_lca(int u,int v)

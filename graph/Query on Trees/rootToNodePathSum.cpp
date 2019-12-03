@@ -34,10 +34,10 @@ int dfs(int u,int p,int valsum)
  {  
     return B.sum(in[u],int[u]+size[u]-1);
  }
- void updateNodeValue(int u,int newval)
+ void updateNodeValue(int u,int addent)
  {
-    B.update(in[u],int[u]+subsize[u]-1,newval-val[u]);
-    val[u]=newval;
+    B.update(in[u],int[u]+subsize[u]-1,addent);
+    val[u]+=addent;
  }
  
  

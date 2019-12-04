@@ -1,4 +1,5 @@
 source    :    https://codeforces.com/blog/entry/15729
+          :    string coperision using hash function
 namespace HashSuffixArray
 {
 	const int

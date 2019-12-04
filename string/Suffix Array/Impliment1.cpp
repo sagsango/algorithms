@@ -1,3 +1,5 @@
+see comments : https://codeforces.com/blog/entry/15317
+
 vector<int> suffix_array(string s)
 {
     int n = s.size();

@@ -1,4 +1,5 @@
 source    :   Competitive Programmer’s Handbook ,Antti Laaksonen ,Draft July 3, 2018 [ page : 164 ]
+          :   Array Tool  :  https://codeforces.com/blog/entry/15729
 Idea      :
 One method to construct an offline algorithm is to perform a depth-first tree
 traversal and maintain data structures in nodes. At each node s , we create a

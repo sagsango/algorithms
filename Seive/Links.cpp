@@ -16,3 +16,5 @@ see segmented seive.
    exponet of prime p in n!.
    
    
+https://www.codechef.com/APRIL17/problems/CHEFDIV 
+See problem discussion.

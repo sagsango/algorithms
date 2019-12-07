@@ -18,3 +18,4 @@ see segmented seive.
    
 https://www.codechef.com/APRIL17/problems/CHEFDIV 
 See problem discussion.
+Also you get seive on the segment O( log(r)*(r-l+1) )

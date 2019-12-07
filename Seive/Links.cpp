@@ -19,3 +19,7 @@ see segmented seive.
 https://www.codechef.com/APRIL17/problems/CHEFDIV 
 See problem discussion.
 Also you get seive on the segment O( sqrt(r)*log(r) )
+
+
+https://cp-algorithms.com/algebra/prime-sieve-linear.html
+Linear seive.

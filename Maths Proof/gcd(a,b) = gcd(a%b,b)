@@ -1,0 +1,1 @@
+gcd(a,b)=gcd(a-b,b)=gcd(a-2b,b)=gcd(a-3b,b)=gcd(a-4b,b)=......=gcd(a%b,b)

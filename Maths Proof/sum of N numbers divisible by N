@@ -1,0 +1,7 @@
+http://zimmer.csufresno.edu/~larryc/proofs/proofs.pigeonhole.html
+
+Theorem. For any N positive integers, the sum of some of these integers (perhaps one of the numbers itself) is divisible by N.
+Proof. Consider the N numbers b1 = (a1) mod(N), b2 =(a1 + a2) mod(N), b3 = (a1+a2+a3) mod(N), ..., bN = (a1 + ... + aN) mod(N).
+If one of these numbers is zero, then we are done. Otherwise, only the N-1 numbers 1, 2, ..., N-1 are represented in this list,
+and so two of them must be the same, bi = bj (say i < j). This would then imply that (ai+1 + ... + aj) mod(N) = 0, proving
+our claim.

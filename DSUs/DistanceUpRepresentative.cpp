@@ -3,7 +3,7 @@ source       :      https://cp-algorithms.com/data_structures/disjoint_set_union
 
 void make_set(int v) {
     parent[v] = make_pair(v, 0);
-    rank[v] = 0;
+    rank[v] = 0;                      /* Instead of rank you can make par = -1 for getting rank */
 }
 
 pair<int, int> find_set(int v) {

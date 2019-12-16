@@ -1,0 +1,11 @@
+O(n)     =>  log(n)
+
+O(n*n)   =>  n*log(n)
+         =>  log(n) * log(n)
+         
+O(n*n*n) =>  n * n * log(n)
+         =>  n * log(n) * log(n)
+         =>  log(n) * log(n) * log(n)
+         
+similarily .....
+   

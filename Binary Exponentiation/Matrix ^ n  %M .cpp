@@ -1,4 +1,5 @@
 problem   :   https://www.spoj.com/problems/MPOW/
+          :   https://codeforces.com/gym/262909/submission/67076009
 
 #include<bits/stdc++.h>
 #define int long long

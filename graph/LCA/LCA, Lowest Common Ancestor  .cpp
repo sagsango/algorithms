@@ -74,7 +74,7 @@ void dfs(int u,int p,int w)
 	for(int i=1;i<=L;i++)
 	{
 		l[u][i]= l[ l[u][i-1] ][i-1];
-		d[u][i]= d[ l[u][i-1] ][i-1] + d[u][i-1];
+		d[u][i]= d[ l[u][i-1] ][i-1] + d[u][i-1]; /* smilarily g[u][i]=__gcd( g[ l[u][i-1] ] , g[u][i-1]);//Not tested */
 	}
 	
 	for(auto[v,w1]:g[u])

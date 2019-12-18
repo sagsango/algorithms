@@ -1,3 +1,33 @@
+https://codeforces.com/blog/entry/57826?fbclid=IwAR084Ea_mN7LFqr-LLooQrtJQ8jiN5g7W3PvA1_JnHuVOsHrj0DH4UIKqTo
+https://codeforces.com/contest/665/problem/F
+https://codeforces.com/blog/entry/44466
+https://projecteuler.net/problem=501
+https://codeforces.com/blog/entry/22929
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
 see codeforces blogs and codechef problems.
 see block seive in cp.algoritham
 see segmented seive.

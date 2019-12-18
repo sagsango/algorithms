@@ -3,6 +3,7 @@ https://codeforces.com/contest/665/problem/F
 https://codeforces.com/blog/entry/44466
 https://projecteuler.net/problem=501
 https://codeforces.com/blog/entry/22929
+https://codeforces.com/blog/entry/62287
 
 
 

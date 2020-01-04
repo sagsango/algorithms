@@ -17,6 +17,7 @@ bool cmp(Query A, Query B){
 
 
 /* Dquery SPOJ */
+/* Given a sequence of n numbers a 1 , a 2 , ..., a n and a number of d-queries. A d-query is a pair (i, j) (1 ≤ i ≤ j ≤ n). For each query-d (i, j), you need to return the number of distinct elements in the sub sequence a i , a i + 1 , ..., a j.*/
 int answer;
 struct query
 {

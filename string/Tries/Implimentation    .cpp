@@ -92,6 +92,34 @@ int main()
 	cout<<T.find("hellogoogle")<<endl;
 	
 	T.display();//display according to dictionary
-	
-	
+}
+
+
+/*************************************************************************************************************************/
+const int N=26;
+class tri{
+	public:
+	int val;
+	tri*c[N];
+	tri()
+	{ 
+		val=0;
+	    for(int i=0;i<N;i++){
+		   this->c[i]=NULL;
+	    }
+	}
+};
+void insert(tri * head,string s){
+	for(int i=0;i<s.length();i++){
+		if(head->c[s[i]-'a']==NULL)head->c[s[i]-'a']=new tri;
+		head=head->c[s[i]-'a'];
+		head->val++;
+	}
+}
+int query(tri * head,string s){
+	for(int i=0;i<s.length();i++){
+		if(head->c[s[i]-'a']!=NULL)head=head->c[s[i]-'a'];
+		else return 0;
+	}
+	return head->val;
 }

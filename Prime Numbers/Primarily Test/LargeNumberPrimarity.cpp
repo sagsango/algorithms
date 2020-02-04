@@ -62,7 +62,7 @@ ull mod_pow(ull a, ull b, ull mod) {
 						return res;
 }
 bool prime(ull p) {
-		if (p == 2||p==1) return true;
+		if (p == 2||p==1) return true;                              // 1 is treated as prime : take of it [ other fine]
 			if (p == 1 || p % 2 == 0) return false;
 				ull s = p - 1;
 					while (s % 2 == 0) s /= 2;

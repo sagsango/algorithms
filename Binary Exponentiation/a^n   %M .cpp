@@ -1,5 +1,6 @@
 int power(int a,int n,int M)
 {
+    if( M ==  1 ) return 0;    // Never Forget
     int r=1;
     while( n )
     {

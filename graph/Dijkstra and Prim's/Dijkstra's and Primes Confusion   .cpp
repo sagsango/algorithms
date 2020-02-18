@@ -1,5 +1,8 @@
 1.https://stackoverflow.com/questions/14144279/difference-between-prims-and-dijkstras-algorithms
 2.Dijkstra's algorithm doesn't create a MST, it finds the shortest path.
+3.See kickstart Probelm and solution :
+    https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051066/0000000000051135
+
 Consider this graph
 
        5     5
@@ -50,7 +53,7 @@ Dijkstra (G, w, r) {
             u = Extract-Min(Q)
             for each v ∈ G.Adj[u]
 
-                if (v ∈ Q) and w(u,v) < v.key
+                if (v ∈ Q) and u.key + w(u,v) < v.key
 
                     v.parent = u
                     v.key = w(u,v) + u.key  <== relax function, Pay attention here

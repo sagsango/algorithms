@@ -1,14 +1,35 @@
-https://codeforces.com/blog/entry/16221
-h[root] = 0
-par[v] = -1
-dfs (v):
-        d[v] = h[v]
-        color[v] = gray
-        for u in adj[v]:
-                if color[u] == white
-                        then par[u] = v and dfs(u) and d[v] = min(d[v], d[u])
-                        if d[u] > h[v]
-                                then the edge v-u is a cut edge
-                else if u != par[v])
-                        then d[v] = min(d[v], h[u])
-        color[v] = black
+// https://cp-algorithms.com/graph/bridge-searching.html
+
+int n; // number of nodes
+vector<vector<int>> adj; // adjacency list of graph
+
+vector<bool> visited;
+vector<int> tin, low;
+int timer;
+
+void dfs(int v, int p = -1) {
+    visited[v] = true;
+    tin[v] = low[v] = timer++;
+    for (int to : adj[v]) {
+        if (to == p) continue;
+        if (visited[to]) {
+            low[v] = min(low[v], tin[to]);
+        } else {
+            dfs(to, v);
+            low[v] = min(low[v], low[to]);
+            if (low[to] > tin[v])
+                BRIDGE(v, to);
+        }
+    }
+}
+
+void find_bridges() {
+    timer = 0;
+    visited.assign(n, false);
+    tin.assign(n, -1);
+    low.assign(n, -1);
+    for (int i = 0; i < n; ++i) {
+        if (!visited[i])
+            dfs(i);
+    }
+}

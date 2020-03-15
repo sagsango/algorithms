@@ -1,3 +1,4 @@
+/* In 1D tree we use BIT or segtree to answer the quries */
 Problem : https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/tree-query-3-5d98588f/
 Solution:
 

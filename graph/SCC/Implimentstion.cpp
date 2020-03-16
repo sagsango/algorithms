@@ -27,7 +27,7 @@ vector < vector<int> > g, gr;
         cin >> n >> m;
         g=vector<vector<int>>(n);
         gr=vector<vector<int>>(n);
-        used=vector<int>(n);
+        used=vector<bool>(n);
         
         for (int i = 0 ;i < m;i++) {
             int a, b;

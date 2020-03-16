@@ -8,6 +8,7 @@ vector<int> tin, low;
 int timer;
 
 void dfs(int v, int p = -1) {
+    /* Use bool to cut[e]=1, because cut[e]  may updated more than once */
     visited[v] = true;
     tin[v] = low[v] = timer++;
     for (int to : adj[v]) {
@@ -32,43 +33,4 @@ void find_bridges() {
         if (!visited[i])
             dfs(i);
     }
-}
-
-
-
-
-/* Another implimentation */
-vector<vector<int>>g;
-vector<int>h;
-vector<int>hmin;
-vector<int>clr;
-map<pair<int,int>,int>dp;
-
-void dfs(int u,int p)
-{
-	if( p!=-1 )
-	{
-		h[u]=h[p]+1;
-	}
-	clr[u]=1;
-	for(auto v:g[u])
-	{
-		if(!clr[v])
-		{
-			dfs(v,u);
-			hmin[u]=min(hmin[u],hmin[v]);
-			if( h[v] <= hmin[v] )
-			{
-				 int x = min( u , v );
-		         int y = max( u , v );
-		         dp[{x,y}]=1;
-			}
-				
-		}
-		else if(v!=p)
-		{
-			hmin[u]=min(hmin[u],h[v]);
-		}
-	}
-	clr[u]=2;
 }

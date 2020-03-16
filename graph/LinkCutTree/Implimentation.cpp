@@ -1,5 +1,6 @@
 Problem     :  https://discuss.codechef.com/t/gerald07-editorial/4849
 Resources   :  https://github.com/saadtaame/link-cut-tree
+               see paper in library.
 
 
 

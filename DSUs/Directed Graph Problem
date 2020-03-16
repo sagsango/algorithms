@@ -1,0 +1,16 @@
+Dynamic Connectivity:[ adding edged - without deletion ]
+     n*n solution with bitset
+     every edged has bitset[u]: for reachability
+     in dfs(for auto v:g[u])
+        {
+            if( !vis[v] )
+            {
+               dfs(v);
+               bitse[u]|=bitset[v];
+            }
+        }
+        
+        
+   It was problem on codeforecs [ i forgot ]
+   see paper on library.
+     

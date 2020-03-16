@@ -10,6 +10,7 @@ vector<int> tin, low;
 int timer;
 
 void dfs(int v, int p = -1) {
+    /* Use bool to cut[v]=1, because cut[v]  may updated more than once */
     visited[v] = true;
     tin[v] = low[v] = timer++;
     int children=0;

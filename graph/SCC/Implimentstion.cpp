@@ -1,7 +1,4 @@
-source code   :   https://cp-algorithms.com/graph/strongly-connected-components.html
-
-
-
+//source code   :   https://cp-algorithms.com/graph/strongly-connected-components.html
 vector < vector<int> > g, gr;
     vector<bool> used;
     vector<int> order, component;
@@ -28,6 +25,8 @@ vector < vector<int> > g, gr;
         g=vector<vector<int>>(n);
         gr=vector<vector<int>>(n);
         used=vector<bool>(n);
+        component.clear();
+        order.clear();
         
         for (int i = 0 ;i < m;i++) {
             int a, b;

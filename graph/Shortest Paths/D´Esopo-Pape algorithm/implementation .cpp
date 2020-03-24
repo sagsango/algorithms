@@ -2,55 +2,11 @@
 // Works on Negative weights but Not on negatice cycle
 // Faster than Dijkstra's algorithm with exceptional case where it takes exponential time.
 
-struct Edge {
-    int to, w;
-};
-
-int n;
-vector<vector<Edge>> adj;
-
-const int INF = 1e9;
-
-void shortest_paths(int v0, vector<int>& d, vector<int>& p) {
-    d.assign(n, INF);
-    d[v0] = 0;
-    vector<int> m(n, 2); // // 0 : has relaexed, 1:being relax 2:yet to relax
-    deque<int> q;
-    q.push_back(v0);
-    p.assign(n, -1);
-
-    while (!q.empty()) {
-        int u = q.front();
-        q.pop_front();
-        m[u] = 0;
-        for (Edge e : adj[u]) {
-            if (d[e.to] > d[u] + e.w) {
-                d[e.to] = d[u] + e.w;
-                p[e.to] = u;
-                if (m[e.to] == 2) {
-                    m[e.to] = 1;
-                    q.push_back(e.to);
-                } else if (m[e.to] == 0) {
-                    m[e.to] = 1;
-                    q.push_front(e.to);
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-/* D´Esopo-Pape */
-
 #include<bits/stdc++.h>
 #define int long long
 #define endl '\n'
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
-
 
 int32_t main()
 {
@@ -101,3 +57,8 @@ int32_t main()
 	}
 	cout << d[t] << endl;
 }
+
+
+
+
+

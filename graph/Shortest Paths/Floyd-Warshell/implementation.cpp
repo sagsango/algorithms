@@ -1,4 +1,6 @@
 // https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html
+// works for negative edges
+// d[i][i] < 0 meanse negative cycle is found
 d[N][N] : D[i][i] = 0;
           D[i][j] = w;
 p[N][N] : p[i][j] = k;[path throught]

@@ -20,3 +20,5 @@ for(int i=1;i<=n;i++) // adding one vertex one by one
             }
       }
 }
+
+// see  : https://github.com/sagsango/UVA/blob/master/10724.cpp

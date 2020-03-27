@@ -23,16 +23,24 @@ int n,m;
 
 int prims(int s=1 )
 {
+	/*          clear the graph           */   
+	
 	//////// Multiple tests  ///////////
-	fill(par.begin(),par.end()+n+1,0);
-	fill(used.begin(),used.end()+m+1,0);
+	fill(par.begin(),par.begin()+n+1,0);
+	fill(used.begin(),used.begin()+m+1,0);
 	////////////////////////////////////
 	
+	/* chenge distance initialisation */
 	vector<int>d(n+1,1e15);
+	
 	vector<int>edgeid(n+1);
 	vector<int>vis(n+1);
+	
+	/* Change priority queue type */
 	priority_queue< pair<int,int> , vector< pair<int,int> > , greater<pair<int,int>> >pq;    
-	d[s]=0;
+	
+	d[s]=0; /* change source distance */
+	
 	pq.push({d[s],s});
 	while( pq.size() )
 	{
@@ -44,6 +52,8 @@ int prims(int s=1 )
 			int v=it.v;
 			int id=it.id;
 			int w =it.w;
+			
+			/* chenge relaxsation */
 			if( !vis[v] && d[v] > w )// !vis[v] meanse v has relaxed all his neibhours &  u  will not going to relax v again with same edge.
 			{
 				d[v]=w;

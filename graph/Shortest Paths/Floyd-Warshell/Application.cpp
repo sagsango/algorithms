@@ -19,6 +19,8 @@
   // https://cp-algorithms.com/graph/fixed_length_paths.html
   
 3.Generalization of the problems for paths with length up to k
+ /* Make edge v - v"  and loop in v" [ directed v->v" v"->v v"-v"]: like autometa to get lost some of the moves */
+
   The above solutions solve the problems for a fixed k. However the solutions can be adapted for solving problems for
   which the paths are allowed to contain no more than k edges.
 

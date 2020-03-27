@@ -1,9 +1,12 @@
-// No neg cycle
-// Undirected
-
 //https://www.spoj.com/problems/MST/
 
-/*Kruskal's*/
+
+/*
+  Kruskal's
+  No neg cycle
+  Undirected only
+  Multiple edges valid
+*/
 #include<bits/stdc++.h>
 #define int long long
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -60,6 +63,3 @@ int32_t main()
 	cin>>U[i]>>V[i]>>W[i];
 	cout<< kruskal() << endl;
 }
-	
- 
- 

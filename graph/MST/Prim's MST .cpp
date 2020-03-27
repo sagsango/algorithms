@@ -23,10 +23,16 @@ int n,m;
 
 int prims(int s=1 )
 {
+	//////// Multiple tests  ///////////
+	fill(par.begin(),par.end()+n+1,0);
+	fill(used.begin(),used.end()+m+1,0);
+	////////////////////////////////////
+	
 	vector<int>d(n+1,1e15);
 	vector<int>edgeid(n+1);
 	vector<int>vis(n+1);
-	priority_queue< pair<int,int> , vector< pair<int,int> > , greater<pair<int,int>> >pq;
+	//priority_queue< pair<int,int> > pq;
+	priority_queue< pair<int,int> , vector< pair<int,int> > , greater<pair<int,int>> >pq;    
 	d[s]=0;
 	pq.push({d[s],s});
 	while( pq.size() )

@@ -1,12 +1,11 @@
-// No negative cycle
-// Undirected [ besauce all the vertix may not be recahble from s / you have to check from every vertex as s
-//
-
-
-
 // https://www.spoj.com/problems/MST/
 
-/*Prims*/
+/*
+  Prims
+  No neg cycle
+  Undirected only  [ besauce all the vertix may not be recahble from s / you have to check from every vertex as s]
+  Multiple edges valid
+*/
 #include<bits/stdc++.h>
 #define int long long
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);

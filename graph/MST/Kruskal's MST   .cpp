@@ -18,7 +18,7 @@ vector<int>used(M+1);
 int n,m;
  
 ////////////////////  Kruskal's MST  ////////////////////////////
-vector<int>par(N+1,-1);
+vector<int>par(N+1);
 int root(int u){return par[u]<0?u:par[u]=root(par[u]);}
 void merge(int u,int v)
 {
@@ -34,6 +34,11 @@ bool edgescmp(const int a , const int b)
 }
 int kruskal(int s=1 )
 {
+	/////////// Multiple test ///////////
+	fill(used.begin(),used.begin()+m+1,0);
+	fill(par.begin(),par.begin()+n+1,-1);
+	/////////////////////////////////////
+	
 	vector<int>edges(m+1);
 	for(int i=1;i<=m;i++)
 	edges[i]=i;

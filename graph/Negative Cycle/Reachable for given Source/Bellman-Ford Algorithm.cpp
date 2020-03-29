@@ -1,6 +1,6 @@
 // https://cp-algorithms.com/graph/bellman_ford.html
 
-/*  O( n*m )   */
+/*  O( n*m )  : Diected and Undirected */
 cont int N = 2000 , M = 2000;
 vector<int>U(N+1),V(N+1),W(M+1);
 int n,m;

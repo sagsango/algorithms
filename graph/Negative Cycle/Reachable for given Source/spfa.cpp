@@ -1,3 +1,5 @@
+// https://cp-algorithms.com/graph/bellman_ford.html
+
 /*  O( n*m )   */
 vector<vector<pair<int,int>>>g;
 int n,m;

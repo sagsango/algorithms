@@ -1,4 +1,4 @@
-/*  O( n*m )  */
+/*  O( n*m )   */
 vector<vector<pair<int,int>>>g;
 int n,m;
 bool isNagtiveCycle(int s)

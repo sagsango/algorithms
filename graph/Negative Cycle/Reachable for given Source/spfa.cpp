@@ -1,6 +1,6 @@
 // https://cp-algorithms.com/graph/bellman_ford.html
 
-/*  O( n*m )   */
+/*  O( n*m )  : Diected and Undirected */
 vector<vector<pair<int,int>>>g;
 int n,m;
 bool isNagtiveCycle(int s)

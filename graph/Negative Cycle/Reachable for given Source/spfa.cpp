@@ -3,18 +3,19 @@
 /*  O( n*m )  : Diected and Undirected */
 vector<vector<pair<int,int>>>g;
 int n,m;
-bool isNagtiveCycle(int s)
+bool isNegtiveCycle(int s=1)
 {
       vector<int>d(n+1,1e15);
       vector<int>inq(n+1);
+      vector<int>cnt(n+1);
       queue<int>q;
       d[s]=0;
-      inq[s]++;
+      inq[s]=1;
       q.push(s);
       while( q.size() )
       {
             int u=q.front();q.pop();
-            inq[u]++;
+            inq[u]=0;
             for(auto it:g[u])
             {
                   int v=it.first;
@@ -22,11 +23,12 @@ bool isNagtiveCycle(int s)
                   if( d[v] > d[u] + w )
                   {
                         d[v]=d[u]+w;
-                        if( (inq[v]&1)^1 )
+                        cnt[v]++;
+                        if(cnt[v]>=n)return 1;
+                        if(!inq[v])
                         {
                               q.push(v);
-                              inq[v]++;
-                              if( inq[v] >= 2*n )return 1;
+                              inq[v]=1;
                         }
                   }
             }

@@ -1,10 +1,10 @@
-vector<vector<pair<int,int>>>G;
+vector<vector<int>>g;
 vector<int> tin;
 vector<int> tout;
 vector<vector<int>>up;
-int t;
+int t,n,lgN;
 
-void dfs(int u,int p,int w)
+void dfs(int u=1,int p=0)
 {
 	tin[u]=++t;
 	up[u][0]=p;
@@ -12,13 +12,11 @@ void dfs(int u,int p,int w)
 	{
 		up[u][i]=up[ up[u][i-1] ][i-1];
 	}
-	for(auto it:G[u])
+	for(auto v:g[u])
 	{
-		int v=it.first;
-		int i=it.second;
 		if( v!= p)
 		{
-			dfs(v,u,W[i]);
+			dfs(v,u);
 		}
 	}
 	tout[u]=++t;
@@ -41,4 +39,12 @@ int LCA(int u,int v)
 	return up[u][0];
 }
 
-
+void init()
+{
+	    lgN=20;
+		t=0;
+		g=vector<vector<int>>(n+1);
+		up=vector<vector<int>>(n+1,vector<int>(lgN+1));
+		tin=vector<int>(n+1);
+		tout=vector<int>(n+1);
+}

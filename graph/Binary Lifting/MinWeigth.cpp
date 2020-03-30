@@ -1,27 +1,39 @@
-vector<vector<pair<int,int>>>G;
+https://www.spoj.com/problems/DISQUERY/
+
+#include<bits/stdc++.h>
+#define int long long
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+using namespace std;
+
+const int inf = 1e15 ;
+vector<vector<pair<int,int>>>g;
 vector<int> tin;
 vector<int> tout;
 vector<vector<int>>up;
-vector<vector<int>>mnw; // Initialise with inf
-int t;
+vector<vector<int>>mxw; // Initialise with -inf.
+vector<vector<int>>mnw; // Initialise with +inf.
+int t,n,lgN;
 
-void dfs(int u,int p,int w)
+////////////////////// Binary Lifting ////////////////////////////////////////////////////
+void dfs(int u=1,int p=0,int w=0)
 {
 	tin[u]=++t;
 	up[u][0]=p;
-	mnw[u][0]=w;
+	mxw[u][0]=( p ? w : -inf);
+	mnw[u][0]=( p ? w : +inf);
 	for(int i=1;i<=lgN;i++)
 	{
 		up[u][i]=up[ up[u][i-1] ][i-1];
+		mxw[u][i]=max(mxw[ up[u][i-1] ][i-1],mxw[u][i-1]);
 		mnw[u][i]=min(mnw[ up[u][i-1] ][i-1],mnw[u][i-1]);
 	}
-	for(auto it:G[u])
+	for(auto it:g[u])
 	{
 		int v=it.first;
-		int i=it.second;
+		int w=it.second;
 		if( v!= p)
 		{
-			dfs(v,u,W[i]);
+			dfs(v,u,w);
 		}
 	}
 	tout[u]=++t;
@@ -44,31 +56,72 @@ int LCA(int u,int v)
 	return up[u][0];
 }
 
-int MinWeightQuery(int u,int v)
+pair<int,int> MaxMinWeightQuery(int u,int v)
 {
 	
 	int l = LCA(u,v);
-	int w = inf;
+	int mx = -inf;
+	int mn = +inf;
 	if( u!=l )
 	{
 		for(int i=lgN;i>=0;i--)
 	    if( up[u][i] && !isAncestor(up[u][i],l))
 	    {
-			w=min(w,mnw[u][i]);
+			mx=max(mx,mxw[u][i]);
+			mn=min(mn,mnw[u][i]);
 			u=up[u][i];
 		}
-		w=min(w,mnw[u][0]);
+		mx=max(mx,mxw[u][0]);
+		mn=min(mn,mnw[u][0]);
 	}
 	if( v!=l )
 	{
 		for(int i=lgN;i>=0;i--)
 	    if( up[v][i] && !isAncestor(up[v][i],l))
 	    {
-			w=min(w,mnw[v][i]);
+			mx=max(mx,mxw[v][i]);
+			mn=min(mn,mnw[v][i]);
 			v=up[v][i];
 		}
-		w=min(w,mnw[v][0]);
+		mx=max(mx,mxw[v][0]);
+		mn=min(mn,mnw[v][0]);
 	}
-	return w;
+	return {mx,mn};
 }
-/////////////////////////////////////////////////////////
+
+void init()
+{
+	t=0;
+	lgN=20;
+	g=vector<vector<pair<int,int>>>(n+1);
+    tin=vector<int>(n+1);
+    tout=vector<int>(n+1);
+    up=vector<vector<int>>(n+1,vector<int>(lgN+1));
+    mxw=vector<vector<int>>(n+1,vector<int>(lgN+1,-inf)); // Initialise with -inf.
+    mnw=vector<vector<int>>(n+1,vector<int>(lgN+1,+inf)); // Initialise with +inf.
+}
+	
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+int32_t main()
+{
+	IOS
+	cin>>n;
+	init();
+	for(int i=1;i<n;i++)
+	{
+		int u,v,w;cin>>u>>v>>w;
+		g[u].push_back({v,w});
+		g[v].push_back({u,w});
+	}
+	dfs();
+	int q;cin>>q;
+	while( q-- )
+	{
+		int u,v;cin>>u>>v;
+		pair<int,int>Q=MaxMinWeightQuery(u,v);
+		cout<<Q.second<<" "<<Q.first<<endl;
+	}
+	
+}

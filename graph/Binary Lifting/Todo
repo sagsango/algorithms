@@ -1,5 +1,6 @@
 1.max power of Prime p.
         => used to find the lcm if only some of primes can be there
+           [ Problem can be : find the no of divisors of the lcm betwen the path of u-v nodes. ]
 2.Or
 3.Xor
 4.And

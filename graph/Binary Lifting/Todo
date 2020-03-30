@@ -1,9 +1,10 @@
 1.max power of Prime p.
-        => used to find the lcm
+        => used to find the lcm if only some of primes can be there
 2.Or
 3.Xor
 4.And
 5.Product modulo MOD
 6.No of Even Nodes
 7.No of Odd nodes
+8.lcm
 

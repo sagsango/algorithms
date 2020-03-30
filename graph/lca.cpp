@@ -1,21 +1,31 @@
 https://codeforces.com/blog/entry/16221
 https://cp-algorithms.com/graph/lca_binary_lifting.html
 
-Preprocessing:
-void dfs(int v,int p = -1){
-	if(par + 1)
-		h[v] = h[p] + 1;
-	par[v] = p;
-	for(auto u : adj[v])	if(p - u)
-		dfs(u,v);
+vector<vector<int>>g;
+vector<int>h;
+vector<int>par;
+int n;
+
+void dfs(int u=1,int p = 0){
+
+	h[u] = h[p] + 1;
+	par[u] = p;
+	for(auto v : g[u])	
+	{
+		if(v!=p)
+		{
+			dfs(v,u);
+		}
+	}
 }
-Query :
+
 int LCA(int v,int u){
-	if(v == u)
-		return v;
-	if(h[v] < h[u])
-		swap(v,u);
-	return LCA(par[v], u);
+	while( u!=v )
+	{
+		if( h[v] > h[u] ) v = par[v];
+		else u=par[u];
+	}
+	return u;
 }
 
 

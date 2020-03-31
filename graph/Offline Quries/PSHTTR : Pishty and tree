@@ -1,0 +1,96 @@
+// https://www.codechef.com/problems/PSHTTR
+// dp some optimization
+#include<bits/stdc++.h>
+#define int long long
+#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+using namespace std;
+ 
+vector<vector<pair<int,int>>>G;
+vector<vector<pair<int,int>>>Q;
+vector<int>ans;
+vector<int>B;
+map<int,int>Ii;  // for compression
+int n,q,m;
+
+void Update(int I,int val)
+{
+	while( I && I <= m )
+	{
+		B[I]^=val;
+		I+=I&-I;
+	}
+}
+
+int Query(int I)
+{
+	int x = 0;
+	while( I > 0 )
+	{
+		x^=B[I];
+		I-=I&-I;
+	}
+	return x;
+}
+
+void dfs(int u,int p,int w)
+{
+	Update(Ii[w],w);
+	for(size_t i=0;i<Q[u].size();i++)
+	{
+		int index = Q[u][i].first;
+		int wt    = Q[u][i].second;
+		
+		ans[index]^= Query(Ii[wt]);
+	}
+	for(auto it:G[u])
+	{
+		int v=it.first;
+		int w=it.second;
+		if( v!=p )
+		{
+			dfs(v,u,w);
+		}
+	}
+	Update(Ii[w],w);
+}
+	
+int32_t main()
+{
+	IOS
+	int tc;cin>>tc;
+	while(tc--)
+	{
+		cin >> n ;
+		Q=vector<vector<pair<int,int>>>(n+1);
+		G=vector<vector<pair<int,int>>>(n+1);
+		Ii.clear();
+		for(int i=1;i<n;i++)
+		{
+			int u,v,w;cin>>u>>v>>w;
+			G[u].push_back({v,w});
+			G[v].push_back({u,w});
+			Ii[w]++;
+		}
+		cin >> q;
+		ans=vector<int>(q+1);
+		for(int i=1;i<=q;i++)
+		{
+			int u,v,w;cin>>u>>v>>w;
+			Q[u].push_back({i,w});
+			Q[v].push_back({i,w});
+			Ii[w]++;
+		}
+		m=0;
+		for(auto &it:Ii)
+		{
+			it.second=++m;
+		}
+		B=vector<int>(m+1);
+		
+		dfs(1,0,0);
+		
+		for(int i=1;i<=q;i++)
+		cout << ans[i] <<" ";
+		cout << endl;
+	}
+}

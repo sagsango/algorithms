@@ -3,12 +3,13 @@ vector<int> tin;
 vector<int> tout;
 vector<vector<int>>up;
 vector<vector<int>>d;
-int t;
+int t, n , lgN;
 
 void dfs(int u,int p,int w)
 {
 	tin[u]=++t;
 	up[u][0]=p;
+	h[u]=h[p]+1;
 	d[u][0]=w;
 	for(int i=1;i<=lgN;i++)
 	{
@@ -18,10 +19,10 @@ void dfs(int u,int p,int w)
 	for(auto it:G[u])
 	{
 		int v=it.first;
-		int i=it.second;
+		int w=it.second;
 		if( v!= p)
 		{
-			dfs(v,u,W[i]);
+			dfs(v,u,w);
 		}
 	}
 	tout[u]=++t;
@@ -67,8 +68,8 @@ int DisQuery(int u,int v)
 			dis+=d[v][i];
 			v=up[v][i];
 		}
-	dis+=d[v][0];
+	    dis+=d[v][0];
 	}
-	return w;
+	return dis;
 }
 /////////////////////////////////////////////////////////

@@ -5,6 +5,8 @@ using namespace std;
 #define N 3	 // Number of unknowns 
 
 
+/* Dont try to replace double with int */
+
 int forwardElim(double mat[N][N+1]); 
 void backSub(double mat[N][N+1]); 
 void gaussianElimination(double mat[N][N+1]) 

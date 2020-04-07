@@ -1,1 +1,2 @@
 https://leetcode.com/contest/weekly-contest-183/problems/stone-game-iii/
+https://codingcompetitions.withgoogle.com/codejam/round/00000000000516b9/0000000000134cdf

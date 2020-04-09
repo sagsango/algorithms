@@ -1,4 +1,5 @@
 // https://www.spoj.com/problems/RMQSQ/    [ for sqrt(n)+1 size block see submissions ]
+// https://cp-algorithms.com/data_structures/sqrt_decomposition.html
 #include<bits/stdc++.h>
 #define int long long
 #define endl "\n"

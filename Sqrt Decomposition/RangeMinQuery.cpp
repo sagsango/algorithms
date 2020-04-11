@@ -6,6 +6,8 @@
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
 
+/* some how it is woring use 0 indexing then you will get better result because your block indesing is from 0 */
+
 int32_t main(){
 	IOS
 	int n ; cin >> n ;

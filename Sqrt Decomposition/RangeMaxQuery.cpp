@@ -6,6 +6,8 @@
 using namespace std;
 
 
+/* some how it is woring use 0 indexing then you will get better result because your block indesing is from 0 */
+
 int32_t main(){
 	IOS
 	int n,m;cin>>n>>m;

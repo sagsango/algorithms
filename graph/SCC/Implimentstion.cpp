@@ -3,6 +3,7 @@ vector < vector<int> > g, gr;
     vector<bool> used;
     vector<int> order, component;
 
+   /* Note Interchainging g and gr between dfs1 and df2 works fine */
     void dfs1 (int v) {
         used[v] = true;
         for (size_t i=0; i<g[v].size(); ++i)

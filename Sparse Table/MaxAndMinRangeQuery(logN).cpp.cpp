@@ -19,7 +19,7 @@ int32_t main(){
 		}
 	}
 	auto query = [&](int l,int r){
-  // for O(1) use log2() but in c++ it can give error because of pricisions.
+                // for O(1) use log2() but in c++ it can give error because of pricisions.
 		int tmx = -1e15 , tmn = +1e15;
 		for(int i=lgn-1;i>=0;i--){
 			if( l + (1LL<<i) -1 <= r ){

@@ -20,11 +20,11 @@ int32_t main(){
 	}
 	auto query = [&](int l,int r){
 		auto msb=[&](int x) {
-			    //  https://codeforces.com/blog/entry/10330
-          //  works with int32_t only.
-	        union { double a; int b[2]; };
-            a = x;
-	        return (b[1] >> 20LL) - 1023LL;
+	        	//  https://codeforces.com/blog/entry/10330
+                	//  works with int32_t only.
+	       	        union { double a; int b[2]; };
+            		a = x;
+	        	return (b[1] >> 20LL) - 1023LL;
 		};
 		int k = msb(r-l+1);
 		int tmx = max( mx[l][k] , mx[r-(1LL<<k)+1][k] );

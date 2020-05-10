@@ -1,7 +1,7 @@
 https://codeforces.com/gym/279715/submission/79666581
 
 const int maxn = 1e5 + 5 , lgn = 21;
-int mx[maxn][lgn],mn[maxn][lgn],lg[maxn],n,k;
+int mx[maxn][lgn],mn[maxn][lgn],lg[maxn],n;
 
 int32_t main(){
 	IOS
@@ -11,7 +11,7 @@ int32_t main(){
 	for(int i=2;i<maxn;i++){
 		lg[i]=lg[i>>1]+1;
 	}
-	cin>>n>>k;
+	cin>>n;
 	for(int i=0;i<n;i++){
 		int x;cin>>x;
 		mx[i][0]=mn[i][0]=x;

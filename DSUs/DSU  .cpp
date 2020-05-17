@@ -4,6 +4,8 @@
 using namespace std;
 /*
 //rank and path compression used
+const int maxn = 1e6 + 5;
+vector<int>par(maxn,-1);
 int root(int v){return par[v] < 0 ? v : (par[v] = root(par[v]));}
 void merge(int x,int y){	//	x and y are some tools (vertices)
         if((x = root(x)) == (y = root(y)) )    return ;

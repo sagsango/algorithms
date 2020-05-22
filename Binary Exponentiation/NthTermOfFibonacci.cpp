@@ -20,7 +20,8 @@ using namespace std;
 fib:
  [ f[i] f[i-1] ] [ 1  1 ]  = f[i+1] f[i]
                    1  0
- [ 1  1 ] * [ 1 1 ] ^ n
+            
+ [ 1  1 ] * [ 1 1 ] ^ n-1 = f[i+1] f[i]
             [ 1 0 ] 
 */
 
@@ -61,11 +62,12 @@ class matrixExponentiation{
 
 int32_t main(){
 	IOS
-	vector<int>a={1,1}; // first two term 
-	vector<vector<int>>b={ {1,1} , {2,0} }; // coefficient matix of fibb.
+	vector<int>a={1,1}; // first 1st and 0th term respectivily
+	vector<vector<int>>b={ {1,1} , {1,0} }; // coefficient matix of fibb. 
+	// how to find coefficient matix see :   http://zobayer.blogspot.com/2010/11/matrix-exponentiation.html
 	int n;cin>>n;
 	matrixExponentiation me;
-	b=me.solve(b,n-1); // NOTE:dont pass negative value:
+	b=me.solve(b,n-1); // NOTE:dont pass negative value: [ calculate nth fibb n =[1,1e18] ]
 	cout << a[0]*b[0][0] + a[1]*b[1][0] << endl;
 	
 	

@@ -17,44 +17,57 @@ using namespace std;
 
 
 /*
-we were solving problem for : f[i] = 2*f[i-2] + f[i]
-
 fib:
  [ f[i] f[i-1] ] [ 1  1 ]  = f[i+1] f[i]
                    1  0
-
-req:
- [ f[i] f[i-1] ] [ 1  1 ]  = f[i+1] f[i]
-                   2  0
+ [ 1  1 ] * [ 1 1 ] ^ n
+            [ 1 0 ] 
 */
 
-vector<int> binpow(vector<int>a,vector<vector<int>>b,int n){
-	while( n ){
-		if( n & 1 ){
-			int x = a[0] * b[0][0] + a[1] * b[1][0];
-			int y = a[0] * b[0][1] + a[1] * b[1][1];
-			a[0]=x;
-			a[1]=y;
+class matrixExponentiation{
+	public : 
+	vector<vector<int>> multiply(vector<vector<int>>a ,vector<vector<int>> b , int n)
+	{
+		int M=1e9+7;
+		vector<vector<int>>c(n,vector<int>(n));
+		for(int i=0;i<n;i++)
+		for(int j=0;j<n;j++)
+		{
+			for(int ic=0,jr=0;ic<n && jr<n;ic++,jr++)
+			{
+				c[i][j]+=a[i][ic] * b[jr][j];
+				c[i][j]%=M;                            /*      MOD Should be taken care of     */
+			}
 		}
-		vector<vector<int>>temp(2,vector<int>(2));
-		temp[0][0] = b[0][0] * b[0][0] + b[1][0] * b[0][1];
-		temp[0][1] = b[0][0] * b[0][1] + b[1][0] * b[1][1];
-		temp[1][0] = b[1][0] * b[0][0] + b[1][1] * b[0][1];
-		temp[1][1] = b[1][0] * b[0][1] + b[1][1] * b[1][1];
-		n>>=1;
-		b = temp;
+		return c;
 	}
-	return a;
-}
+	vector<vector<int>> solve(vector<vector<int>>mat,int p)
+	{
+		int n=mat.size();
+		vector<vector<int>>a(n,vector<int>(n));
+		for(int i=0;i<n;i++)a[i][i]=1;
+		while( p )
+		{
+			if( p & 1 )
+			{
+				a=multiply( a , mat , n);
+			}
+			mat=multiply( mat , mat , n);
+			p>>=1;
+		}
+		return a;
+	}
+};
+
 int32_t main(){
 	IOS
-	vector<int>a={1,1}; // 0th and 1st elemnt value is provided
-	vector<vector<int>>b={ {1,1} , {1,0} }; //coefficient matix of fibbonacii
+	vector<int>a={1,1}; // first two term 
+	vector<vector<int>>b={ {1,1} , {2,0} }; // coefficient matix of fibb.
 	int n;cin>>n;
-	vector<int>ans = binpow(a,b,n-1); // we will caluclate : 1 , 2 , 3 , 4 , 5 ............... element 
-	                                  // by muliplying coefficient matix n-1 times
-	                                  // it is abous for n = 0 we have to answer explicitly.
-	cout << ans[0] << endl;
+	matrixExponentiation me;
+	b=me.solve(b,n-1); // NOTE:dont pass negative value:
+	cout << a[0]*b[0][0] + a[1]*b[1][0] << endl;
+	
 	
 }
  

@@ -22,7 +22,7 @@ class matrixExponentiation{
 		}
 		return c;
 	}
-	vector<vector<int>> solve(vector<vector<int>>mat,int p)
+	vector<vector<int>> MatixToThePowerP(vector<vector<int>>mat,int p)
 	{
 		int n=mat.size();
 		vector<vector<int>>a(n,vector<int>(n));
@@ -52,7 +52,7 @@ int32_t main()
 		for(int j=0;j<n;j++)
 		cin>>a[i][j];
 		matrixExponentiation me;
-		vector<vector<int>> b=me.solve(a,p);
+		vector<vector<int>> b=me.MatixToThePowerP(a,p);
 		for(int i=0;i<n;i++)
 		{
 			for(int j=0;j<n;j++)

@@ -42,7 +42,7 @@ class matrixExponentiation{
 		}
 		return c;
 	}
-	vector<vector<int>> solve(vector<vector<int>>mat,int p)
+	vector<vector<int>> MatrixToThePowerP(vector<vector<int>>mat,int p)
 	{
 		int n=mat.size();
 		vector<vector<int>>a(n,vector<int>(n));
@@ -67,8 +67,9 @@ int32_t main(){
 	// how to find coefficient matix see :   http://zobayer.blogspot.com/2010/11/matrix-exponentiation.html
 	int n;cin>>n;
 	matrixExponentiation me;
-	b=me.solve(b,n-1); // NOTE:dont pass negative value: [ calculate nth fibb n =[1,1e18] ]
-	cout << a[0]*b[0][0] + a[1]*b[1][0] << endl;
+	b=me.MatrixToThePowerP(b,n); // NOTE:dont pass negative value: [ calculate nth fibb n =[1,1e18] ]
+	[ f[1] f[0] ] * coeffi ^ n = [ f[1+n] f[n] ]
+	cout << a[0]*b[0][1] + a[1]*b[1][1] << endl;
 	
 	
 }

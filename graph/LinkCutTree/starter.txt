@@ -1,1 +1,2 @@
-start
+https://codeforces.com/blog/entry/2752
+https://codeforces.com/contest/117/submission/860934

@@ -1,3 +1,4 @@
+// lca using hld faster than binary lifting : at least 2 times
 void dfs(int u,int p){
 	par[u]=p;
 	subtree[u]=1;

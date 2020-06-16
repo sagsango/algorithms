@@ -42,7 +42,7 @@ int pathSum(int u,int l){ // u to lca
 	}
 }
 // https://cp-algorithms.com/graph/hld.html
-int pathSum(int u,int v){ // u and v
+int pathSum(int u,int v){ // any two vertex u and v
 	while( head[u] != head[v] ){
 		if( dep[head[u]] < dep[head[v]] ){
 			swap(u,v);

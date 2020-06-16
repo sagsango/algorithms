@@ -1,4 +1,8 @@
-// lca using hld faster than binary lifting : at least 2 times
+1. lca using hld faster than binary lifting : at least 2 times      https://cses.fi/problemset/result/506768/
+2. Updation/Query of nodes lies in Path u and v                     https://cp-algorithms.com/graph/hld.html
+3. Updation/Query of nodes lies is Path root to u                   https://codeforces.com/gym/284118/submission/83903790
+4. Updation/Query of node lies in subtree.                          https://codeforces.com/gym/284118/submission/83903790
+
 void dfs(int u,int p){
 	par[u]=p;
 	subtree[u]=1;

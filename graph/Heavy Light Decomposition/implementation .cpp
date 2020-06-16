@@ -2,6 +2,7 @@
 2. Updation/Query of nodes lies in Path u and v                     https://cp-algorithms.com/graph/hld.html
 3. Updation/Query of nodes lies is Path root to u                   https://codeforces.com/gym/284118/submission/83903790
 4. Updation/Query of node lies in subtree.                          https://codeforces.com/gym/284118/submission/83903790
+Note : dfs order is always best                                     https://codeforces.com/blog/entry/21693
 
 void dfs(int u,int p){
 	par[u]=p;

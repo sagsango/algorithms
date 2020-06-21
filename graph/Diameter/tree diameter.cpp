@@ -1,6 +1,6 @@
 // https://codeforces.com/gym/284118/submission/84062274
 int diameter(int n,vector<vector<int>>g){ // nodes 1 to n
-	vector<int>vis(n+1),dp(n+1);
+	vector<int>vis(n+1),dp(n+1);      // g : forest 
 	int dia = 0;
 	function<void(int)> dfs = [&](int u){
 		dp[u]=0;

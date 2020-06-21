@@ -24,7 +24,7 @@ pair<int,int> DiaAndCenter(int s){
 			}
 		}
 		return ans;
-    };
+        };
 	s = farthest(s);
 	queue<int>q;
 	q.push(s);

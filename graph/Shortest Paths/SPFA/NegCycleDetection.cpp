@@ -1,39 +1,46 @@
 //   https://cp-algorithms.com/graph/bellman_ford.html
 //   The worst case of this algorithm is equal to the O(nm) of the Bellman-Ford, but in practice it works much faster and some people claim that it works even in O(m) on average. However be careful, because this algorithm is deterministic and it is easy to create counterexamples that make the algorithm run in O(nm).
 //   With negative weigth [ No negative cycle ]
-const int INF = 1000000000;
-vector<vector<pair<int, int>>> adj;
 
-bool spfa(int s, vector<int>& d) {
-    int n = adj.size();
-    d.assign(n, INF);
-    vector<int> cnt(n, 0);
-    vector<bool> inqueue(n, false);
-    queue<int> q;
 
-    d[s] = 0;
-    q.push(s);
-    inqueue[s] = true;
-    while (!q.empty()) {
-        int v = q.front();
-        q.pop();
-        inqueue[v] = false;
-
-        for (auto edge : adj[v]) {
-            int to = edge.first;
-            int len = edge.second;
-
-            if (d[v] + len < d[to]) {
-                d[to] = d[v] + len;
-                if (!inqueue[to]) {
-                    q.push(to);
-                    inqueue[to] = true;
-                    cnt[to]++;
-                    if (cnt[to] > n)
-                        return false;  // negative cycle
-                }
-            }
-        }
-    }
-    return true;
+// Not Tested
+const int maxn = 2e5+10;
+vector<pair<int,int>>g[maxn];
+int n;
+bool NegCycle(){
+    vector<int>dis(maxn),inq(maxn),cnt(maxn),vis(maxn);
+	function<bool(int)>spfa=[&](int s){
+		queue<int>q;
+		dis[s]=0;
+		q.push(s);
+		inq[s]=1;
+		vis[s]=1;
+		while( q.size() ){
+			int u = q.front();q.pop();inq[u]=0;
+			for(auto [v,w]:g[u]){
+				if( dis[v] > dis[u] + w){
+					dis[v] = dis[u] + w;
+					vis[v] = 1;
+					if( !inq[v] ){
+						q.push(v);
+						inq[v]=1;
+						cnt[v]++;
+						if( cnt[v] > n ){
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return false;
+	};
+	fill(dis.begin(),dis.end(),1e15);
+	for(int i=1;i<=n;i++){
+		if( !vis[i] ){
+			if( spfa(i) ){
+				return 1;
+			}
+		}
+	}
+	return 0;
 }

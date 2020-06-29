@@ -2,7 +2,7 @@ const int maxn = 105, maxm = 10005;
 vector<pair<int,int>>g[maxn],gr[maxn];
 vector<int>U(maxm),V(maxm),W(maxm),candidate(maxm);
 int n,m;
-void CandidateEdgesForShortestPathFromDoubleSource(int s,int t){  // source and terminal [ according to tpl sort ]
+void CandidateEdgesForShortestPathBetweenSourceAndTerminal(int s,int t){  // source and terminal [ according to tpl sort ]
 	function<vector<int>(vector<vector<pair<int,int>>>&,int)>spfa=[&](vector<vector<pair<int,int>>>&g,int s){
 		vector<int>dis(n+1,1e15);
 		vector<int>inq(n+1);

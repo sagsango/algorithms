@@ -1,6 +1,7 @@
 // https://stackoverflow.com/questions/7918806/finding-n-th-permutation-without-computing-others
+// https://codeforces.com/gym/286070/problem/AF
 
-
+// Works fine if n! <= 1e18
 vector<int> ithPermutation(const int n, int i){
    
    vector<int>fact(n),perm(n);

@@ -9,18 +9,18 @@ vector<bool> visited;
 vector<int> tin, low;
 int timer;
 
-void dfs(int v, int p = -1) {
+void dfs(int v, int pid = -1) {
     /* Use bool to cut[e]=1, because cut[e]  may updated more than once */
     visited[v] = true;
     tin[v] = low[v] = timer++;
     for (auto it : adj[v]) {
-		int to = it.first;
-		int id = it.second;
-        if (to == p) continue;
+	int to = it.first;
+	int id = it.second;
+        if (id == pid) continue;
         if (visited[to]) {
             low[v] = min(low[v], tin[to]);
         } else {
-            dfs(to, v);
+            dfs(to, id); // to deal deal with multiple edges
             low[v] = min(low[v], low[to]);
             if (low[to] > tin[v])
                 /*BRIDGE(v, to);*/

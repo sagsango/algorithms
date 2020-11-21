@@ -1,7 +1,7 @@
 // nax : maximum length of string
 // (1e9+7)^2, (1e9+9)^2, (1e9+21)^1  <= LONG_MAX : use long long to store product
 const int nax = ( 2e6 /*change len*/ )+10, M[3] ={ (int)(1e9+7), (int)(1e9+9), (int)(1e9+21) }, P[3] = {29, 31, 37};
-const int hashCount = 3; // no of hashes want to use
+const int hashCount = 2; // no of hashes want to use
 int coef[3][nax];
 
 // n   : no of strings

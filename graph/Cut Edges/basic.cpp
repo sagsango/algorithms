@@ -29,7 +29,7 @@ vector<int> find_cut_vertex(int n,int m,vector<vector<int>>&g){ // g[u].push_bac
 			}else
 				mn[u] = min(mn[u],h[v]);
 		}
-		if( mn[u] >= h[u] )
+		if( mn[u] >= h[u] )   // back edge should go to predeceros
 			cVtex[u] = 1;
 	}
 	dfs(1,0);

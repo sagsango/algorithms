@@ -1,4 +1,5 @@
 // Not Tested
+// same file in cut vertex
 vector<int> find_cut_edges(int n,int m,vector<vector<pair<int,int>>>&g){ // g[u].push_back({v,id})
 	// assuming graph is connected otherwise no meaning
 	vector<int>h(n+1),mn(n+1),cEdge(n+1); 

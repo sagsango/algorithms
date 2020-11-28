@@ -6,7 +6,7 @@ void dfs(int v,int p = -1){
   euler.push_back(v);
 }
 
-
+/*NOTE: I think it is subtree update + node query, in[u]+=val, out[u]-=val, and node val = forInrngeSum(in[u]) - forOutrangeSum(in[u])
 1.Update all subtree  + path sum query. [ sum of path between u - v : which can be broken down to root-v sum]
 Consider 2 copies for a single node in the Euler tour, one for entry and one for exit. When you want to add a value v 
 to the subtree, maintain a fenwick tree, and do +=v on in[node] and -=v on out[node]. Path sum query can be broken down 

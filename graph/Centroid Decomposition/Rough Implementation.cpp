@@ -42,7 +42,7 @@ void decompose(int u=1,int par=0){
         
         /* Decomose recursivily and solve rest*/
         for(auto v:g[c]){
-                g[v].erase(u);// erase(c)
+                g[v].erase(c);
                 decompose(v,c);
         }
 }

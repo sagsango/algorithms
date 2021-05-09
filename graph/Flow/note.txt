@@ -1,0 +1,3 @@
+Endmons is very easy to learn, but needs n * n matrix representation of graph
+
+We use dinic, grapth with adjenciy list, idea is same as endmons and huge improvement.

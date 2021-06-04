@@ -9,7 +9,7 @@ int coef[3][nax];
 // sh  : suffix hash
 int n;
 vector<vector<int>>ph[3],sh[3];
-vector<string>s;
+vector<string>s(nax);
 
 void compute(){
 	// compute coef accordingly

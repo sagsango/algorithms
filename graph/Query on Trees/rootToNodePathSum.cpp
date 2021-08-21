@@ -30,11 +30,11 @@ int dfs(int u,int p,int valsum)
  }
  int subTreeNodeSum(int u)
  {  
-    return B.sum(in[u],int[u]+size[u]-1);
+    return B.sum(in[u],in[u]+size[u]-1);
  }
  void updateNodeValue(int u,int addent)
  {
-    B.update(in[u],int[u]+subsize[u]-1,addent);
+    B.update(in[u],in[u]+subsize[u]-1,addent);
     val[u]+=addent;
  }
  

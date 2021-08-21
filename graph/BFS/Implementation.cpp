@@ -8,30 +8,30 @@ Make Grath from Given Grid or Given conditions
 Adjencancy List or Adjencency Matrix => Dense or Sparse
 
 
-   /*
-     Also Can Make a Par[] array for parent 
-   */
-    vector<int>g[N+1];
-    vector<int>l(N+1);
-    vector<int>par(N+1);
-    vector<int>vis(N+1);
+/*
+	 Also Can Make a Par[] array for parent 
+ */
+vector<int>g[N+1];
+vector<int>l(N+1);
+vector<int>par(N+1);
+vector<int>vis(N+1);
  
-	queue<int>q;
-	q.push(1);
-        par[1]=0;
-	l[1]=0;
-	vis[1]=1;
-	while(q.size())
+queue<int>q;
+q.push(1);
+par[1]=0;
+l[1]=0;
+vis[1]=1;
+while(q.size())
+{
+	int u=q.front();q.pop();
+	for(auto v:G[u])
 	{
-		int u=q.front();q.pop();
-		for(auto v:G[u])
+		if(!vis[v]) 
 		{
-			if(!vis[v]) 
-			{
-				q.push(v);
-				par[v]=u;
-				l[v]=l[u]+1;
-				vis[v]=1;
-			}
+			q.push(v);
+			par[v]=u;
+			l[v]=l[u]+1;
+			vis[v]=1;
 		}
 	}
+}

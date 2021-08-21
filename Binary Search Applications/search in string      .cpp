@@ -5,8 +5,8 @@
   //using first diff index we can compare the strings 
 
   
-        /* Binanary Lifting can be used here */
-        string s1="abcdefghijklmnopadffawe";
+  /* Binanary Lifting can be used here */
+  string s1="abcdefghijklmnopadffawe";
 	string s2="abcdefghijklmnopadffawe";
 	int r=min(s1.length(),s2.length())+1;
 	int l=0;

@@ -65,6 +65,7 @@ int main() {
     }
     sort(Q,Q+q,cmp);
     int cl=0,cr=0;
+		// Element considered from [cl,cr-1]
     REP(i,0,q)
     {
         int left=Q[i].l,right=Q[i].r;

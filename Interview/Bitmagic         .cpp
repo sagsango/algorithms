@@ -11,6 +11,13 @@
 =>Mximum and pair:
 1. tries
 2. https://www.geeksforgeeks.org/maximum-value-pair-array/
+
+=>Minimum and pair
+and operation of first two minimum elements
+[ sees wrong ]
+
+
+
 #include<bits/stdc++.h> 
 using namespace std; 
 int checkBit(int pattern, int arr[], int n) 
@@ -41,5 +48,4 @@ int main()
     return 0; 
 } 
 
-=>Minimum and pair
-and operation of first two minimum elements
+

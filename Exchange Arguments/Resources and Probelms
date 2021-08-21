@@ -12,3 +12,23 @@ https://cses.fi/poi/task/528
 
 Problems :
 1. https://atcoder.jp/contests/dp/tasks/dp_x
+
+
+give: w[i], s[i], v[i]
+
+if i first:
+W + w[i] < s[j]
+
+W + w[j] > s[i]
+
+
+so both of them should be correct:
+W + w[i] < s[j]
+s[i] < W + w[j]
+
+fianl comperison:
+s[i] + w[i] < s[j] + w[j]
+
+
+
+

@@ -14,7 +14,7 @@ void dfs(int u,int p,int w)
 	for(int i=1;i<=lgN;i++)
 	{
 		up[u][i]=up[ up[u][i-1] ][i-1];
-		X[u][i]=X[ up[u][i-1] ][i-1] ^ X[u][i-1]);
+		X[u][i]=X[ up[u][i-1] ][i-1] ^ X[u][i-1];
 	}
 	for(auto it:G[u])
 	{

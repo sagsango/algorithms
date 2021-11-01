@@ -14,8 +14,8 @@ vector<int> find_cut_edges(int n,int m,vector<vector<pair<int,int>>>&g){ // g[u]
 					cEdge[i] = 1;
 				mn[u] = min(mn[u],mn[v]);
 			}else if( i != e )     // if vis[v] = 1 , then ith edge is defnetly not a bridge -> back edge
-								   // if we came from e edge and then e edge is not a back edge
-								   // if back edge then just update mn[u] with h[v]
+				// if we came from e edge and then e edge is not a back edge
+				// if back edge then just update mn[u] with h[v]
 				mn[u] = min(mn[u],h[v]);
 		}
 	};

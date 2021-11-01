@@ -10,18 +10,18 @@ let's pi[s.length()-1]=l1 =>l1 is also suffix which is prifix
       
       
 vector<int> pxifix_which_are_also_suffix(string s)
-         {
-              vector<int>pi=KMP(s);
-              vector<int>ans;
-              int l=s.length();
-              l=pi[l-1];
-              while(l)
-              {
-                ans.push_back(l);
-                l=pi[l-1];
-              }
-              return ans;
-         }
-         /**
-         * ans[i] : length of prifix which is also a suffix
-         **/
+{
+	vector<int>pi=KMP(s);
+	vector<int>ans;
+	int l=s.length();
+	l=pi[l-1];
+	while(l)
+	{
+		ans.push_back(l);
+		l=pi[l-1];
+	}
+	return ans;
+}
+/**
+ * ans[i] : length of prifix which is also a suffix
+ **/

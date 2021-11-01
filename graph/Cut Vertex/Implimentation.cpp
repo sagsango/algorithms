@@ -26,7 +26,7 @@ void dfs(int v, int p = -1) {
             ++children;
         }
     }
-    if(p == -1 && children > 1)
+    if(p == -1 && children > 1) // TODO: pay attension
         IS_CUTPOINT(v);
 }
 

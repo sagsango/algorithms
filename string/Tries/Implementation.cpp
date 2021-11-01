@@ -1,5 +1,7 @@
-https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3
+// https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3
 
+
+// TODO: delete memory which you have allocated
 #include<bits/stdc++.h>
 using namespace std;
 struct tri{

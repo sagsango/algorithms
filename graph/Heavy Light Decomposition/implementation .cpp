@@ -57,7 +57,7 @@ int pathSum(int u,int v){ // any two vertex u and v
 	}
 	if( dep[u] < dep[v] ){
 		swap(u,v);
-		d+=query(1,1,n,pos[v],dep[u]);
+		d+=query(1,1,n,pos[v],pos[u]);
 	}
 }
 //  https://cses.fi/problemset/result/506768/

@@ -42,9 +42,7 @@ int pathSum(int u,int l){ // u to lca
 		d+= query(1,1,n,pos[head[u]],pos[u]);
 		u=par[head[u]];
 	}
-	if( u != l ){
-		d+= query(1,1,n,pos[l],pos[u]);
-	}
+	d+= query(1,1,n,pos[l],pos[u]);
 }
 // https://cp-algorithms.com/graph/hld.html
 int pathSum(int u,int v){ // any two vertex u and v

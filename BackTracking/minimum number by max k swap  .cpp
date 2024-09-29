@@ -1,6 +1,10 @@
 //https://www.techiedelight.com/find-minimum-number-possible-k-swaps/
 void minimim_numer(string s,int k)
 {
+   /* always pass 1 D array here
+      let's say we want to solve sudoku then we will first gather all the empty (i,j) pair in a 1d array then do this
+      because choosing next element is very tridious task in 2d array
+   */
    ans=min(ans,s);
    if(k)
    {

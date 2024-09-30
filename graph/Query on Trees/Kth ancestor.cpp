@@ -1,6 +1,8 @@
 source    :   Competitive Programmer’s Handbook ,Antti Laaksonen ,Draft July 3, 2018 [ page : 164 ]
 
 /* what will be kth ancestor of the node v : log(n) */
+/* Note: we can do that in O(N) just keep the track of node[hight] = nodval;
+   kickstart way */
 const int L=30;
 const int N=1e6;
 vector<int>g[N+1];

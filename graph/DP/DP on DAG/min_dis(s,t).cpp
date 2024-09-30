@@ -1,4 +1,6 @@
 Referance  : Competitive Programmer’s Handbook Antti Laaksonen Draft July 3, 2018  [ Page - 151 ]
+
+    /* sortest path in O(n) how cool is it :) */
 /*recursive*/
 vector<int>dis(N+1,-1);
 dis[s]=0;

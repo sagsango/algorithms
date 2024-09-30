@@ -36,6 +36,11 @@ int32_t main()
 	}
 	cout<<max_length<<" "<<(mx_length?s1.substr(sub_index_end-max_length+1,max_length):"")<<endl;
 
+
+
+	/* this way is for the beginnners;
+	   use lcp[][]; here */
+
 	
 	
 	
